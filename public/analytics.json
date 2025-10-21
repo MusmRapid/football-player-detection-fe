@@ -1,13 +1,23 @@
 {
   "summary": {
-    "total_goals": 3,
-    "total_passes": 58,
-    "total_tackles": 17
+    "home": {
+      "team_name": "White & Blue FC",
+      "total_goals": 3,
+      "total_passes": 58,
+      "total_tackles": 17
+    },
+    "away": {
+      "team_name": "Crimson United",
+      "total_goals": 2,
+      "total_passes": 49,
+      "total_tackles": 14
+    }
   },
   "players": [
     {
       "id": 7,
       "name": "Daniel Ruiz",
+      "team": "home",
       "goals": 2,
       "passes": 14,
       "tackles": 3
@@ -15,6 +25,7 @@
     {
       "id": 10,
       "name": "Lucas Mendes",
+      "team": "home",
       "goals": 1,
       "passes": 18,
       "tackles": 2
@@ -22,6 +33,7 @@
     {
       "id": 4,
       "name": "Carlos Vega",
+      "team": "home",
       "goals": 0,
       "passes": 12,
       "tackles": 5
@@ -29,9 +41,26 @@
     {
       "id": 2,
       "name": "Rafael Costa",
+      "team": "home",
       "goals": 0,
       "passes": 14,
       "tackles": 7
+    },
+    {
+      "id": 11,
+      "name": "Marco Silva",
+      "team": "away",
+      "goals": 1,
+      "passes": 20,
+      "tackles": 4
+    },
+    {
+      "id": 9,
+      "name": "Pedro Santos",
+      "team": "away",
+      "goals": 1,
+      "passes": 15,
+      "tackles": 3
     }
   ]
 }

@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { Trophy, ArrowUpRight, Activity, Users,  } from "lucide-react";
+import { Trophy, ArrowUpRight, Activity } from "lucide-react";
 import Loader from "./components/Loader";
 import SummaryCard from "./components/SummaryCard";
+import TeamTable from "./components/Tables/TeamTable";
 import type { AnalyticsData } from "./types/analytics";
 
 const FootballAnalyticsDashboard: React.FC = () => {
@@ -18,83 +19,105 @@ const FootballAnalyticsDashboard: React.FC = () => {
   if (!data) return <Loader />;
 
   const { summary, players } = data;
+  const homePlayers = players.filter((p) => p.team === "home");
+  const awayPlayers = players.filter((p) => p.team === "away");
 
   return (
-    <div className="min-h-screen p-6 text-white bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950">
+    <div className="min-h-screen px-4 py-6 text-white bg-gradient-to-br from-slate-950 via-slate-900 to-gray-950 sm:px-6 lg:px-10">
+      {/* Header */}
       <motion.h1
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="mb-10 text-4xl font-bold tracking-tight text-center"
+        className="mb-8 text-3xl font-extrabold tracking-tight text-center sm:text-4xl lg:text-5xl"
       >
-        Football  Dashboard
+        Football Player Analytics
       </motion.h1>
 
-      <div className="grid grid-cols-1 gap-6 mb-12 sm:grid-cols-3">
-        <SummaryCard
-          title="Total Goals"
-          value={summary.total_goals}
-          accent="from-yellow-400/20 to-yellow-600/10"
-          icon={<Trophy className="text-yellow-300 w-7 h-7" />}
-        />
-        <SummaryCard
-          title="Total Passes"
-          value={summary.total_passes}
-          accent="from-blue-400/20 to-blue-600/10"
-          icon={<ArrowUpRight className="text-blue-300 w-7 h-7" />}
-        />
-        <SummaryCard
-          title="Total Tackles"
-          value={summary.total_tackles}
-          accent="from-green-400/20 to-green-600/10"
-          icon={<Activity className="text-green-300 w-7 h-7" />}
-        />
-      </div>
-
+      {/* Team Names */}
       <motion.div
-        initial={{ opacity: 0, y: 40 }}
+        initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
-        className="p-6 border border-gray-800 shadow-2xl bg-gray-900/70 rounded-2xl backdrop-blur-sm"
+        className="flex flex-col items-center justify-center mb-10 space-y-3 text-xl font-bold sm:flex-row sm:space-y-0 sm:gap-6 md:text-2xl"
       >
-        <h2 className="flex items-center gap-2 mb-6 text-xl font-semibold">
-          <Users className="w-5 h-5 text-indigo-400" /> Player Statistics
-        </h2>
-        <div className="overflow-x-auto">
-          <table className="min-w-full text-sm">
-            <thead>
-              <tr className="text-xs tracking-wider text-gray-400 uppercase border-b border-gray-800">
-                <th className="p-3 text-left">#</th>
-                <th className="p-3 text-left">Player</th>
-                <th className="p-3 text-center">Goals</th>
-                <th className="p-3 text-center">Passes</th>
-                <th className="p-3 text-center">Tackles</th>
-              </tr>
-            </thead>
-            <tbody>
-              {players.map((player, i) => (
-                <motion.tr
-                  key={player.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: i * 0.05 }}
-                  className="transition duration-200 border-b border-gray-800 hover:bg-gray-800/50"
-                >
-                  <td className="p-3 text-gray-400">#{player.id}</td>
-                  <td className="p-3 font-medium">{player.name}</td>
-                  <td className="p-3 font-semibold text-center text-yellow-300">
-                    {player.goals}
-                  </td>
-                  <td className="p-3 font-semibold text-center text-blue-300">
-                    {player.passes}
-                  </td>
-                  <td className="p-3 font-semibold text-center text-green-300">
-                    {player.tackles}
-                  </td>
-                </motion.tr>
-              ))}
-            </tbody>
-          </table>
+        <div className="flex items-center gap-2 sm:gap-3">
+          <span className="text-blue-300">{summary.home.team_name}</span>
+        </div>
+        <span className="text-gray-400">vs</span>
+        <div className="flex items-center gap-2 sm:gap-3">
+          <span className="text-red-300">{summary.away.team_name}</span>
         </div>
       </motion.div>
+
+      {/* Summary Grids */}
+      <div className="grid grid-cols-1 gap-8 mb-12 lg:grid-cols-2">
+        {/* Home Team */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="p-5 border shadow-lg sm:p-6 bg-blue-950/40 border-blue-800/50 rounded-2xl backdrop-blur-sm"
+        >
+          <h2 className="flex items-center gap-2 mb-4 text-lg font-semibold text-blue-300 sm:text-xl">
+            <Trophy className="w-5 h-5 text-yellow-400" /> Home Team Stats
+          </h2>
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+            <SummaryCard
+              title="Goals"
+              value={summary.home.total_goals}
+              accent="from-blue-500/30 to-blue-700/20"
+              icon={<Trophy className="w-6 h-6 text-yellow-400" />}
+            />
+            <SummaryCard
+              title="Passes"
+              value={summary.home.total_passes}
+              accent="from-blue-400/20 to-blue-700/20"
+              icon={<ArrowUpRight className="w-6 h-6 text-blue-300" />}
+            />
+            <SummaryCard
+              title="Tackles"
+              value={summary.home.total_tackles}
+              accent="from-blue-500/30 to-green-700/20"
+              icon={<Activity className="w-6 h-6 text-green-300" />}
+            />
+          </div>
+        </motion.div>
+
+        {/* Away Team */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="p-5 border shadow-lg sm:p-6 bg-red-950/40 border-red-800/50 rounded-2xl backdrop-blur-sm"
+        >
+          <h2 className="flex items-center gap-2 mb-4 text-lg font-semibold text-red-300 sm:text-xl">
+            <Trophy className="w-5 h-5 text-yellow-400" /> Opposition Stats
+          </h2>
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+            <SummaryCard
+              title="Goals"
+              value={summary.away.total_goals}
+              accent="from-red-500/30 to-red-700/20"
+              icon={<Trophy className="w-6 h-6 text-yellow-400" />}
+            />
+            <SummaryCard
+              title="Passes"
+              value={summary.away.total_passes}
+              accent="from-red-400/20 to-red-700/20"
+              icon={<ArrowUpRight className="w-6 h-6 text-red-300" />}
+            />
+            <SummaryCard
+              title="Tackles"
+              value={summary.away.total_tackles}
+              accent="from-red-500/30 to-green-700/20"
+              icon={<Activity className="w-6 h-6 text-green-300" />}
+            />
+          </div>
+        </motion.div>
+      </div>
+
+      <div className="grid grid-cols-1 gap-10 md:grid-cols-2">
+        <TeamTable players={homePlayers} color="blue" title="Home Players" />
+        <TeamTable players={awayPlayers} color="red" title="Opposition Players" />
+      </div>
+
     </div>
   );
 };
