@@ -1,0 +1,37 @@
+{
+  "summary": {
+    "total_goals": 3,
+    "total_passes": 58,
+    "total_tackles": 17
+  },
+  "players": [
+    {
+      "id": 7,
+      "name": "Daniel Ruiz",
+      "goals": 2,
+      "passes": 14,
+      "tackles": 3
+    },
+    {
+      "id": 10,
+      "name": "Lucas Mendes",
+      "goals": 1,
+      "passes": 18,
+      "tackles": 2
+    },
+    {
+      "id": 4,
+      "name": "Carlos Vega",
+      "goals": 0,
+      "passes": 12,
+      "tackles": 5
+    },
+    {
+      "id": 2,
+      "name": "Rafael Costa",
+      "goals": 0,
+      "passes": 14,
+      "tackles": 7
+    }
+  ]
+}
