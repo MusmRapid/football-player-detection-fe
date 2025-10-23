@@ -1,66 +1,360 @@
 {
   "summary": {
-    "home": {
-      "team_name": "White & Blue FC",
-      "total_goals": 3,
-      "total_passes": 58,
-      "total_tackles": 17
-    },
-    "away": {
-      "team_name": "Crimson United",
-      "total_goals": 2,
-      "total_passes": 49,
-      "total_tackles": 14
-    }
+    "players": []
   },
-  "players": [
+  "per_event": [
     {
-      "id": 7,
-      "name": "Daniel Ruiz",
-      "team": "home",
-      "goals": 2,
-      "passes": 14,
-      "tackles": 3
+      "event_id": "001",
+      "event_type": "pass",
+      "player_jersey_number": "17",
+      "player_name": null,
+      "start_time": 148.2,
+      "end_time": 148.6,
+      "bounding_box": [
+        0.49,
+        0.49,
+        0.05,
+        0.12
+      ],
+      "confidence": 0.95,
+      "notes": "Kick-off pass to player 10."
     },
     {
-      "id": 10,
-      "name": "Lucas Mendes",
-      "team": "home",
-      "goals": 1,
-      "passes": 18,
-      "tackles": 2
+      "event_id": "002",
+      "event_type": "pass",
+      "player_jersey_number": "10",
+      "player_name": null,
+      "start_time": 149.3,
+      "end_time": 149.8,
+      "bounding_box": [
+        0.55,
+        0.5,
+        0.05,
+        0.12
+      ],
+      "confidence": 0.85,
+      "notes": "Pass back to player 15."
     },
     {
-      "id": 4,
-      "name": "Carlos Vega",
-      "team": "home",
-      "goals": 0,
-      "passes": 12,
-      "tackles": 5
+      "event_id": "003",
+      "event_type": "pass",
+      "player_jersey_number": "15",
+      "player_name": null,
+      "start_time": 159.5,
+      "end_time": 160.2,
+      "bounding_box": [
+        0.77,
+        0.61,
+        0.06,
+        0.13
+      ],
+      "confidence": 0.9,
+      "notes": "Long aerial pass creating a goal scoring opportunity."
     },
     {
-      "id": 2,
-      "name": "Rafael Costa",
-      "team": "home",
-      "goals": 0,
-      "passes": 14,
-      "tackles": 7
+      "event_id": "004",
+      "event_type": "goal",
+      "player_jersey_number": "11",
+      "player_name": null,
+      "start_time": 163.2,
+      "end_time": 163.9,
+      "bounding_box": [
+        0.38,
+        0.47,
+        0.06,
+        0.14
+      ],
+      "confidence": 0.98,
+      "notes": "Scores from the long pass by player 15."
     },
     {
-      "id": 11,
-      "name": "Marco Silva",
-      "team": "away",
-      "goals": 1,
-      "passes": 20,
-      "tackles": 4
+      "event_id": "005",
+      "event_type": "pass",
+      "player_jersey_number": "17",
+      "player_name": null,
+      "start_time": 221.7,
+      "end_time": 222.1,
+      "bounding_box": [
+        0.5,
+        0.5,
+        0.05,
+        0.12
+      ],
+      "confidence": 0.9,
+      "notes": "Kick-off pass after the opponent scored."
     },
     {
-      "id": 9,
-      "name": "Pedro Santos",
-      "team": "away",
-      "goals": 1,
-      "passes": 15,
-      "tackles": 3
+      "event_id": "006",
+      "event_type": "tackle",
+      "player_jersey_number": "11",
+      "player_name": null,
+      "start_time": 243.4,
+      "end_time": 244.0,
+      "bounding_box": [
+        0.49,
+        0.45,
+        0.05,
+        0.13
+      ],
+      "confidence": 0.88,
+      "notes": "Successful tackle to win back possession near the center circle."
+    },
+    {
+      "event_id": "007",
+      "event_type": "pass",
+      "player_jersey_number": "15",
+      "player_name": null,
+      "start_time": 299.7,
+      "end_time": 300.2,
+      "bounding_box": [
+        0.81,
+        0.8,
+        0.07,
+        0.15
+      ],
+      "confidence": 0.85,
+      "notes": "Pass into the final third. The clip ends immediately after."
+    },
+    {
+      "event_id": "60e9d05a-4e2b-426c-8597-814d4e21a1f0",
+      "event_type": "pass",
+      "player_jersey_number": "8",
+      "player_name": null,
+      "start_time": 704.8,
+      "end_time": 705.4,
+      "bounding_box": [
+        0.48,
+        0.45,
+        0.04,
+        0.12
+      ],
+      "confidence": 0.9,
+      "notes": "Short forward pass from the center circle."
+    },
+    {
+      "event_id": "c1f7b88e-3a9d-484f-b6a9-923f03b5f6a2",
+      "event_type": "pass",
+      "player_jersey_number": "4",
+      "player_name": null,
+      "start_time": 710.9,
+      "end_time": 711.5,
+      "bounding_box": [
+        0.39,
+        0.58,
+        0.04,
+        0.11
+      ],
+      "confidence": 0.85,
+      "notes": "Long pass from deep in his own half."
+    },
+    {
+      "event_id": "89b3a4c1-d2f6-4e5a-a7f8-11c5d6e2b3f4",
+      "event_type": "tackle",
+      "player_jersey_number": "10",
+      "player_name": null,
+      "start_time": 822.1,
+      "end_time": 822.7,
+      "bounding_box": [
+        0.26,
+        0.49,
+        0.05,
+        0.14
+      ],
+      "confidence": 0.95,
+      "notes": "Successful tackle just outside the opponent's penalty area, leading directly to a goal-scoring opportunity."
+    },
+    {
+      "event_id": "d5f6a7b2-c1e0-4987-a2f3-34d5e1f6a7b8",
+      "event_type": "goal",
+      "player_jersey_number": "10",
+      "player_name": null,
+      "start_time": 822.8,
+      "end_time": 823.8,
+      "bounding_box": [
+        0.27,
+        0.5,
+        0.05,
+        0.14
+      ],
+      "confidence": 0.98,
+      "notes": "Player scored with a left-footed shot immediately after winning the ball from a tackle."
+    },
+    {
+      "event_id": "a9b8c7d6-e5f4-4321-b0a9-87c6d5e4f3a2",
+      "event_type": "tackle",
+      "player_jersey_number": "10",
+      "player_name": null,
+      "start_time": 865.8,
+      "end_time": 866.6,
+      "bounding_box": [
+        0.49,
+        0.55,
+        0.04,
+        0.12
+      ],
+      "confidence": 0.9,
+      "notes": "Successful tackle in the midfield to regain possession."
+    },
+    {
+      "event_id": "f1e2d3c4-b5a6-4987-8765-4321f0e9d8c7",
+      "event_type": "pass",
+      "player_jersey_number": "11",
+      "player_name": null,
+      "start_time": 889.2,
+      "end_time": 890.1,
+      "bounding_box": [
+        0.18,
+        0.4,
+        0.05,
+        0.14
+      ],
+      "confidence": 0.88,
+      "notes": "Pass forward while running down the left flank."
+    },
+    {
+      "event_id": "893c837a-4c9f-4422-b5e1-8a9a2a970e7a",
+      "event_type": "pass",
+      "player_jersey_number": "10",
+      "player_name": null,
+      "start_time": 901.4,
+      "end_time": 901.7,
+      "bounding_box": [
+        452,
+        421,
+        38,
+        77
+      ],
+      "confidence": 0.8,
+      "notes": "Long aerial pass from midfield. Jersey number is partially obscured."
+    },
+    {
+      "event_id": "76d2994e-b088-43d8-a1e1-e17f7302484a",
+      "event_type": "tackle",
+      "player_jersey_number": "11",
+      "player_name": null,
+      "start_time": 904.0,
+      "end_time": 904.5,
+      "bounding_box": [
+        488,
+        465,
+        41,
+        88
+      ],
+      "confidence": 0.9,
+      "notes": "Successful tackle to win the ball in the center of the pitch."
+    },
+    {
+      "event_id": "58f4a72d-8064-4e41-b0e2-63b715a31e13",
+      "event_type": "pass",
+      "player_jersey_number": "8",
+      "player_name": null,
+      "start_time": 937.7,
+      "end_time": 938.0,
+      "bounding_box": [
+        474,
+        489,
+        39,
+        81
+      ],
+      "confidence": 0.7,
+      "notes": "Header pass in the center circle. Jersey number is difficult to confirm."
+    },
+    {
+      "event_id": "96c15b17-7435-43a9-90b5-e63d41f530e1",
+      "event_type": "pass",
+      "player_jersey_number": "11",
+      "player_name": null,
+      "start_time": 961.7,
+      "end_time": 962.1,
+      "bounding_box": [
+        338,
+        611,
+        49,
+        99
+      ],
+      "confidence": 0.95,
+      "notes": "Long pass to switch the play from the left to the right flank."
+    },
+    {
+      "event_id": "0f62b471-5511-4475-8022-7711d99e74d4",
+      "event_type": "pass",
+      "player_jersey_number": "9",
+      "player_name": null,
+      "start_time": 988.4,
+      "end_time": 988.8,
+      "bounding_box": [
+        493,
+        545,
+        42,
+        91
+      ],
+      "confidence": 0.9,
+      "notes": "Short pass made under pressure from an opponent."
+    },
+    {
+      "event_id": "3196c80c-a901-417c-a496-c11c47087612",
+      "event_type": "tackle",
+      "player_jersey_number": "18",
+      "player_name": null,
+      "start_time": 991.8,
+      "end_time": 992.3,
+      "bounding_box": [
+        413,
+        452,
+        45,
+        93
+      ],
+      "confidence": 0.85,
+      "notes": "Successful tackle near the center of the field."
+    },
+    {
+      "event_id": "d1c0b39e-d3f3-4e42-9907-7e62704043b8",
+      "event_type": "tackle",
+      "player_jersey_number": "11",
+      "player_name": null,
+      "start_time": 999.3,
+      "end_time": 999.8,
+      "bounding_box": [
+        335,
+        467,
+        55,
+        102
+      ],
+      "confidence": 0.9,
+      "notes": "Sliding tackle to intercept a pass in the midfield."
+    },
+    {
+      "event_id": "c76f52e5-79a0-48e2-b13d-59d1e1f7d3d7",
+      "event_type": "pass",
+      "player_jersey_number": "11",
+      "player_name": null,
+      "start_time": 1003.2,
+      "end_time": 1003.6,
+      "bounding_box": [
+        478,
+        518,
+        48,
+        97
+      ],
+      "confidence": 0.95,
+      "notes": "Long pass played back towards the team's own goalkeeper."
+    },
+    {
+      "event_id": "a9a859e3-82b5-4122-832f-acdf2236d6c8",
+      "event_type": "pass",
+      "player_jersey_number": "11",
+      "player_name": null,
+      "start_time": 1033.4,
+      "end_time": 1033.7,
+      "bounding_box": [
+        347,
+        477,
+        46,
+        95
+      ],
+      "confidence": 0.8,
+      "notes": "Simple short pass as part of the team's build-up play."
     }
-  ]
+  ],
+  "notes": "Merged from Gemini chunk outputs"
 }
