@@ -31,3 +31,10 @@ export interface AnalyticsData {
   per_event: EventItem[];
   notes?: string;
 }
+
+export interface SummaryCardProps {
+  title: string;
+  value: number | string;
+  icon: React.ReactNode;
+  accent: string; // Tailwind CSS gradient classes
+}
