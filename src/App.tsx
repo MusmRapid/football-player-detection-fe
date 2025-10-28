@@ -101,6 +101,25 @@ const App: React.FC = () => {
   }
 }, []);
 
+const inferTeam = (note?: string): string | null => {
+  if (!note) return null;
+  const text = note.toLowerCase();
+  if (text.includes("red")) return "red";
+  if (text.includes("blue")) return "blue";
+  if (text.includes("maroon")) return "red"; // maroon considered red
+  return null;
+};
+
+const processedEvents = events.map((ev) => ({
+  ...ev,
+  team: ev.team ?? inferTeam(ev.notes),
+}));
+
+const redTeamEvents = processedEvents.filter(ev => ev.team === "red");
+const blueTeamEvents = processedEvents.filter(ev => ev.team === "blue");
+const undeterminedEvents = processedEvents.filter(ev => !ev.team);
+
+
   return (
     <div className="min-h-screen px-4 py-6 text-white bg-gradient-to-br from-slate-950 via-slate-900 to-gray-950 sm:px-6 lg:px-10">
       <motion.h1
@@ -144,16 +163,37 @@ const App: React.FC = () => {
         </div>
       )}
 
-      {data && !processing && (
-        <main className="max-w-6xl mx-auto space-y-8">
-          <SummaryAndCounts events={events} summaryPayload={data.summary} />
-
-          <div>
-            <h2 className="mb-3 text-lg font-semibold">Detected Events</h2>
-            <EventsTable events={events} />
-          </div>
-        </main>
+    <main className="mx-auto space-y-8 max-w-7xl">
+      {data?.summary && (
+        <SummaryAndCounts events={events} summaryPayload={data.summary} />
       )}
+
+      {data && (
+        <div>
+          <h2 className="mb-3 text-lg font-semibold">Detected Events</h2>
+
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+            <div>
+              <h3 className="mb-2 text-red-400">Red Team</h3>
+              <EventsTable events={redTeamEvents} />
+            </div>
+
+            <div>
+              <h3 className="mb-2 text-blue-400">Blue Team</h3>
+              <EventsTable events={blueTeamEvents} />
+            </div>
+          </div>
+
+          {undeterminedEvents.length > 0 && (
+            <div className="pt-8 border-t border-gray-800">
+              <h3 className="mb-2 text-yellow-400">Undetermined Events</h3>
+              <EventsTable events={undeterminedEvents} />
+            </div>
+          )}
+        </div>
+      )}
+    </main>
+
     </div>
   );
 };

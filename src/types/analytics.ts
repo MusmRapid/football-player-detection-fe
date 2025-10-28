@@ -5,10 +5,12 @@ export interface EventItem {
   player_name: string | null;
   start_time: number;
   end_time: number;
-  bounding_box: number[]; // either relative [cx, cy, w, h] or absolute [x,y,w,h]
+  bounding_box: number[];
   confidence: number;
   notes?: string;
+  team?: string | null; // ✅ Add this line
 }
+
 
 export interface TeamSummary {
   team_name?: string;
