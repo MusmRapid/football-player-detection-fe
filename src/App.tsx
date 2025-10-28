@@ -1,118 +1,153 @@
 import React, { useState, useCallback } from "react";
 import { motion } from "framer-motion";
-// import Loader from "./components/Loader";
-// import SummaryCard from "./components/SummaryCard";
+// import axios from "axios";
 import type { AnalyticsData, EventItem } from "./types/analytics";
 import EventsTable from "./components/Tables/EventsTable";
 import UploadSection from "./components/HomeComp/UploadSection";
 import SummaryAndCounts from "./components/HomeComp/SummaryAndCounts";
+import Loader from "./components/Loader";
 
-const MOCK_FETCH_PATH = "/analytics.json"; // the file you placed in public/
+// const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 
 const App: React.FC = () => {
   const [data, setData] = useState<AnalyticsData | null>(null);
   const [uploading, setUploading] = useState(false);
+  const [processing, setProcessing] = useState(false);
   const [progress, setProgress] = useState(0);
   const [events, setEvents] = useState<EventItem[]>([]);
+  const [error, setError] = useState<string | null>(null);
 
-  const handleFileUpload = useCallback((file: File) => {
-    // reset states
-    setUploading(true);
-    setProgress(3);
-    setData(null);
-    setEvents([]);
+  // const handleFileUpload = useCallback(async (file: File) => {
+  //   setUploading(true);
+  //   setProcessing(false);
+  //   setProgress(0);
+  //   setData(null);
+  //   setEvents([]);
+  //   setError(null);
 
-    // simulate upload progress
-    let p = 3;
-    const iv = setInterval(() => {
-      p += Math.random() * 12; // random increment
-      if (p >= 92) {
-        clearInterval(iv);
-        // simulate finalizing and fetching analytics.json
-        fetch(MOCK_FETCH_PATH)
-          .then((r) => r.json())
-          .then((json: AnalyticsData) => {
-            // small finishing animation
-            let finish = 92;
-            const fin = setInterval(() => {
-              finish += 4;
-              setProgress(Math.min(finish, 100));
-              if (finish >= 100) {
-                clearInterval(fin);
-                setTimeout(() => {
-                  setData(json);
-                  setEvents(json.per_event ?? []);
-                  setUploading(false);
-                  setProgress(0);
-                }, 350);
-              }
-            }, 60);
-          })
-          .catch((err) => {
-            console.error("Failed to load analytics mock:", err);
-            setUploading(false);
-            setProgress(0);
-          });
-      } else {
-        setProgress(Math.min(p, 92));
-      }
-    }, 300);
+  //   try {
+  //     const formData = new FormData();
+  //     formData.append("file", file);
 
-    // In a real scenario you'd POST the file:
-    // const fd = new FormData();
-    // fd.append("file", file);
-    // fetch("/api/upload", { method: "POST", body: fd, ... })
-    // and track progress via XHR upload.onprogress or backend-sent events
-  }, []);
+  //     const response = await axios.post(`${BACKEND_URL}/process_video`, formData, {
+  //       headers: { "Content-Type": "multipart/form-data" },
+  //       onUploadProgress: (e) => {
+  //         if (e.total) {
+  //           const percent = Math.round((e.loaded * 100) / e.total);
+  //           setProgress(percent);
+  //         }
+  //       },
+  //     });
 
-  // Re-upload handler just triggers the file pick via UploadSection UI
-  const handlePickAgain = () => {
-    // we'll pass this down to UploadSection which shows a button when compact
-    // no-op here because UploadSection triggers file input itself
-  };
+  //     setUploading(false);
+  //     setProcessing(true);
 
-  // Render loader if initial fetch needed (not necessary here)
-  // if you want automatic fetch on mount, you could implement it.
-  // but we start empty and wait for upload.
+  //     setTimeout(() => {
+  //       const json: AnalyticsData = response.data;
+  //       setData(json);
+  //       setEvents(json.per_event ?? []);
+  //       setProcessing(false);
+  //       setProgress(0);
+  //     }, 800);
+  //   } catch (err) {
+  //     console.error("Upload failed:", err);
+  //     setError("Failed to upload or process the video. Please try again.");
+  //     setUploading(false);
+  //     setProcessing(false);
+  //     setProgress(0);
+  //   }
+  // }, []);
+
+
+  const handleFileUpload = useCallback(async () => {
+  setUploading(true);
+  setProcessing(false);
+  setProgress(0);
+  setData(null);
+  setEvents([]);
+  setError(null);
+
+  try {
+    // Simulate upload progress
+    let progressVal = 0;
+    const progressInterval = setInterval(() => {
+      progressVal += 8;
+      setProgress(Math.min(progressVal, 95));
+    }, 200);
+
+    setTimeout(async () => {
+      clearInterval(progressInterval);
+      setUploading(false);
+      setProcessing(true);
+
+      // Load static JSON instead of backend
+      const response = await fetch("/analytics.json");
+      const json: AnalyticsData = await response.json();
+
+      // Simulate small processing delay
+      setTimeout(() => {
+        setData(json);
+        setEvents(json.per_event ?? []);
+        setProcessing(false);
+        setProgress(0);
+      }, 800);
+    }, 1500);
+  } catch (err) {
+    console.error("Failed to load static analytics.json:", err);
+    setError("Failed to load analytics.json file.");
+    setUploading(false);
+    setProcessing(false);
+    setProgress(0);
+  }
+}, []);
+
   return (
     <div className="min-h-screen px-4 py-6 text-white bg-gradient-to-br from-slate-950 via-slate-900 to-gray-950 sm:px-6 lg:px-10">
       <motion.h1
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="mb-8 text-3xl font-extrabold tracking-tight text-center sm:text-4xl lg:text-5xl"
+        className="mb-8 text-3xl font-medium tracking-tight text-center sm:text-4xl lg:text-5xl"
       >
         Football Player Analytics
       </motion.h1>
 
-      {/* Upload area at top (compact when data exists) */}
       <div className="mb-8">
         <UploadSection
           compact={!!data}
           uploading={uploading}
           progress={progress}
           onFile={handleFileUpload}
-          onPickAgain={handlePickAgain}
         />
       </div>
 
-      {/* If uploading and no data yet, show loader-ish UI under upload area */}
       {uploading && !data && (
         <div className="max-w-4xl mx-auto mt-8">
           <div className="p-6 text-center border border-gray-800 rounded-2xl bg-gray-900/60">
             <p className="text-sm text-gray-300">
-              Uploading — processing will begin when upload finishes.
+              Uploading video... ({progress}%)
             </p>
           </div>
         </div>
       )}
 
-      {/* When we have data, show summary + events */}
-      {data && (
+      {processing && !data && (
+        <div className="max-w-4xl mx-auto mt-16">
+          <Loader message="AI is processing your video — please wait..." />
+        </div>
+      )}
+
+      {error && (
+        <div className="max-w-4xl mx-auto mt-6">
+          <div className="p-4 text-center text-red-400 border border-red-500/40 rounded-xl bg-red-900/10">
+            {error}
+          </div>
+        </div>
+      )}
+
+      {data && !processing && (
         <main className="max-w-6xl mx-auto space-y-8">
-          {/* Summary cards: derive totals from per_event for robustness */}
           <SummaryAndCounts events={events} summaryPayload={data.summary} />
 
-          {/* Events table */}
           <div>
             <h2 className="mb-3 text-lg font-semibold">Detected Events</h2>
             <EventsTable events={events} />
@@ -124,4 +159,3 @@ const App: React.FC = () => {
 };
 
 export default App;
-

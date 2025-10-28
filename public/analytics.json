@@ -1,359 +1,1127 @@
 {
   "summary": {
-    "players": []
+    "players": [
+      {
+        "player_jersey_number": "17",
+        "player_name": null,
+        "notes": "Blue team"
+      },
+      {
+        "player_jersey_number": "11",
+        "player_name": null,
+        "notes": "Blue team"
+      },
+      {
+        "player_jersey_number": "10",
+        "player_name": null,
+        "notes": "Blue team"
+      },
+      {
+        "player_jersey_number": "20",
+        "player_name": null,
+        "notes": "Maroon team"
+      },
+      {
+        "player_jersey_number": "8",
+        "player_name": null,
+        "notes": "Team in maroon"
+      },
+      {
+        "player_jersey_number": "2",
+        "player_name": null,
+        "notes": "Team in maroon"
+      },
+      {
+        "player_jersey_number": "6",
+        "player_name": null,
+        "notes": "Team in blue"
+      },
+      {
+        "player_jersey_number": "11",
+        "player_name": null,
+        "notes": "Team in maroon"
+      },
+      {
+        "jersey_number": "4",
+        "team": "maroon"
+      },
+      {
+        "jersey_number": "11",
+        "team": "maroon"
+      },
+      {
+        "jersey_number": "9",
+        "team": "blue"
+      },
+      {
+        "jersey_number": "10",
+        "team": "blue"
+      },
+      {
+        "jersey_number": "11",
+        "team": "blue"
+      },
+      {
+        "jersey_number": "15",
+        "team": "blue"
+      },
+      {
+        "player_jersey_number": "9",
+        "team": "Red",
+        "notes": "Scored two goals."
+      },
+      {
+        "player_jersey_number": "19",
+        "team": "Red",
+        "notes": "Scored a long-distance goal."
+      },
+      {
+        "player_jersey_number": "17",
+        "team": "Red",
+        "notes": "Scored a goal."
+      },
+      {
+        "player_jersey_number": "8",
+        "team": "Red",
+        "notes": ""
+      },
+      {
+        "player_jersey_number": "21",
+        "team": "Blue",
+        "notes": ""
+      },
+      {
+        "player_jersey_number": "12",
+        "team": "Blue",
+        "notes": ""
+      },
+      {
+        "player_jersey_number": "17",
+        "team": "Blue",
+        "notes": ""
+      },
+      {
+        "player_name": null,
+        "player_jersey_number": "11"
+      },
+      {
+        "player_name": null,
+        "player_jersey_number": "4"
+      },
+      {
+        "player_name": null,
+        "player_jersey_number": "21"
+      },
+      {
+        "player_name": null,
+        "player_jersey_number": "5"
+      },
+      {
+        "player_name": null,
+        "player_jersey_number": "22"
+      },
+      {
+        "player_name": null,
+        "player_jersey_number": "17"
+      },
+      {
+        "player_name": null,
+        "player_jersey_number": "13"
+      }
+    ]
   },
   "per_event": [
     {
-      "event_id": "001",
+      "event_id": "93b21841-f76e-4416-a212-32a2f26019a2",
       "event_type": "pass",
-      "player_jersey_number": "17",
+      "player_jersey_number": "21",
       "player_name": null,
-      "start_time": 148.2,
-      "end_time": 148.6,
-      "bounding_box": [
-        0.49,
-        0.49,
-        0.05,
-        0.12
-      ],
-      "confidence": 0.95,
-      "notes": "Kick-off pass to player 10."
-    },
-    {
-      "event_id": "002",
-      "event_type": "pass",
-      "player_jersey_number": "10",
-      "player_name": null,
-      "start_time": 149.3,
-      "end_time": 149.8,
-      "bounding_box": [
-        0.55,
-        0.5,
-        0.05,
-        0.12
-      ],
-      "confidence": 0.85,
-      "notes": "Pass back to player 15."
-    },
-    {
-      "event_id": "003",
-      "event_type": "pass",
-      "player_jersey_number": "15",
-      "player_name": null,
-      "start_time": 159.5,
-      "end_time": 160.2,
-      "bounding_box": [
-        0.77,
-        0.61,
-        0.06,
-        0.13
-      ],
-      "confidence": 0.9,
-      "notes": "Long aerial pass creating a goal scoring opportunity."
-    },
-    {
-      "event_id": "004",
-      "event_type": "goal",
-      "player_jersey_number": "11",
-      "player_name": null,
-      "start_time": 163.2,
-      "end_time": 163.9,
-      "bounding_box": [
-        0.38,
-        0.47,
-        0.06,
-        0.14
-      ],
-      "confidence": 0.98,
-      "notes": "Scores from the long pass by player 15."
-    },
-    {
-      "event_id": "005",
-      "event_type": "pass",
-      "player_jersey_number": "17",
-      "player_name": null,
-      "start_time": 221.7,
-      "end_time": 222.1,
-      "bounding_box": [
-        0.5,
-        0.5,
-        0.05,
-        0.12
-      ],
-      "confidence": 0.9,
-      "notes": "Kick-off pass after the opponent scored."
-    },
-    {
-      "event_id": "006",
-      "event_type": "tackle",
-      "player_jersey_number": "11",
-      "player_name": null,
-      "start_time": 243.4,
-      "end_time": 244.0,
-      "bounding_box": [
-        0.49,
-        0.45,
-        0.05,
-        0.13
-      ],
-      "confidence": 0.88,
-      "notes": "Successful tackle to win back possession near the center circle."
-    },
-    {
-      "event_id": "007",
-      "event_type": "pass",
-      "player_jersey_number": "15",
-      "player_name": null,
-      "start_time": 299.7,
-      "end_time": 300.2,
-      "bounding_box": [
-        0.81,
-        0.8,
-        0.07,
-        0.15
-      ],
-      "confidence": 0.85,
-      "notes": "Pass into the final third. The clip ends immediately after."
-    },
-    {
-      "event_id": "60e9d05a-4e2b-426c-8597-814d4e21a1f0",
-      "event_type": "pass",
-      "player_jersey_number": "8",
-      "player_name": null,
-      "start_time": 704.8,
-      "end_time": 705.4,
-      "bounding_box": [
-        0.48,
-        0.45,
-        0.04,
-        0.12
-      ],
-      "confidence": 0.9,
-      "notes": "Short forward pass from the center circle."
-    },
-    {
-      "event_id": "c1f7b88e-3a9d-484f-b6a9-923f03b5f6a2",
-      "event_type": "pass",
-      "player_jersey_number": "4",
-      "player_name": null,
-      "start_time": 710.9,
-      "end_time": 711.5,
-      "bounding_box": [
-        0.39,
-        0.58,
-        0.04,
-        0.11
-      ],
-      "confidence": 0.85,
-      "notes": "Long pass from deep in his own half."
-    },
-    {
-      "event_id": "89b3a4c1-d2f6-4e5a-a7f8-11c5d6e2b3f4",
-      "event_type": "tackle",
-      "player_jersey_number": "10",
-      "player_name": null,
-      "start_time": 822.1,
-      "end_time": 822.7,
+      "start_time": 6.5,
+      "end_time": 7.5,
       "bounding_box": [
         0.26,
-        0.49,
+        0.62,
         0.05,
         0.14
       ],
-      "confidence": 0.95,
-      "notes": "Successful tackle just outside the opponent's penalty area, leading directly to a goal-scoring opportunity."
+      "confidence": 0.8,
+      "notes": "Pass from the left side of the field back towards the center."
     },
     {
-      "event_id": "d5f6a7b2-c1e0-4987-a2f3-34d5e1f6a7b8",
-      "event_type": "goal",
-      "player_jersey_number": "10",
-      "player_name": null,
-      "start_time": 822.8,
-      "end_time": 823.8,
-      "bounding_box": [
-        0.27,
-        0.5,
-        0.05,
-        0.14
-      ],
-      "confidence": 0.98,
-      "notes": "Player scored with a left-footed shot immediately after winning the ball from a tackle."
-    },
-    {
-      "event_id": "a9b8c7d6-e5f4-4321-b0a9-87c6d5e4f3a2",
+      "event_id": "0d2c67ef-3172-4696-98ec-668b5e9b816a",
       "event_type": "tackle",
-      "player_jersey_number": "10",
+      "player_jersey_number": null,
       "player_name": null,
-      "start_time": 865.8,
-      "end_time": 866.6,
+      "start_time": 32.2,
+      "end_time": 33.2,
       "bounding_box": [
-        0.49,
+        0.54,
         0.55,
+        0.09,
+        0.18
+      ],
+      "confidence": 0.85,
+      "notes": "A player in a red jersey tackles a player in a blue jersey in the center circle."
+    },
+    {
+      "event_id": "1",
+      "event_type": "tackle",
+      "player_jersey_number": null,
+      "player_name": null,
+      "start_time": 39.5,
+      "end_time": 40.5,
+      "bounding_box": [
+        0.26,
+        0.65,
+        0.08,
+        0.18
+      ],
+      "confidence": 0.8,
+      "notes": "Maroon player tackles a blue player, resulting in a foul."
+    },
+    {
+      "event_id": "f5f29910-c447-4933-90d0-aa51c360098f",
+      "event_type": "pass",
+      "player_jersey_number": "12",
+      "player_name": null,
+      "start_time": 40.1,
+      "end_time": 41.1,
+      "bounding_box": [
+        0.55,
+        0.5,
         0.04,
         0.12
       ],
-      "confidence": 0.9,
-      "notes": "Successful tackle in the midfield to regain possession."
+      "confidence": 0.82,
+      "notes": "A pass made by a player in a blue jersey in the midfield."
     },
     {
-      "event_id": "f1e2d3c4-b5a6-4987-8765-4321f0e9d8c7",
-      "event_type": "pass",
-      "player_jersey_number": "11",
-      "player_name": null,
-      "start_time": 889.2,
-      "end_time": 890.1,
-      "bounding_box": [
-        0.18,
-        0.4,
-        0.05,
-        0.14
-      ],
-      "confidence": 0.88,
-      "notes": "Pass forward while running down the left flank."
-    },
-    {
-      "event_id": "893c837a-4c9f-4422-b5e1-8a9a2a970e7a",
-      "event_type": "pass",
-      "player_jersey_number": "10",
-      "player_name": null,
-      "start_time": 901.4,
-      "end_time": 901.7,
-      "bounding_box": [
-        452,
-        421,
-        38,
-        77
-      ],
-      "confidence": 0.8,
-      "notes": "Long aerial pass from midfield. Jersey number is partially obscured."
-    },
-    {
-      "event_id": "76d2994e-b088-43d8-a1e1-e17f7302484a",
-      "event_type": "tackle",
-      "player_jersey_number": "11",
-      "player_name": null,
-      "start_time": 904.0,
-      "end_time": 904.5,
-      "bounding_box": [
-        488,
-        465,
-        41,
-        88
-      ],
-      "confidence": 0.9,
-      "notes": "Successful tackle to win the ball in the center of the pitch."
-    },
-    {
-      "event_id": "58f4a72d-8064-4e41-b0e2-63b715a31e13",
-      "event_type": "pass",
-      "player_jersey_number": "8",
-      "player_name": null,
-      "start_time": 937.7,
-      "end_time": 938.0,
-      "bounding_box": [
-        474,
-        489,
-        39,
-        81
-      ],
-      "confidence": 0.7,
-      "notes": "Header pass in the center circle. Jersey number is difficult to confirm."
-    },
-    {
-      "event_id": "96c15b17-7435-43a9-90b5-e63d41f530e1",
-      "event_type": "pass",
-      "player_jersey_number": "11",
-      "player_name": null,
-      "start_time": 961.7,
-      "end_time": 962.1,
-      "bounding_box": [
-        338,
-        611,
-        49,
-        99
-      ],
-      "confidence": 0.95,
-      "notes": "Long pass to switch the play from the left to the right flank."
-    },
-    {
-      "event_id": "0f62b471-5511-4475-8022-7711d99e74d4",
+      "event_id": "event_1",
       "event_type": "pass",
       "player_jersey_number": "9",
       "player_name": null,
-      "start_time": 988.4,
-      "end_time": 988.8,
+      "start_time": 40.5,
+      "end_time": 41.5,
       "bounding_box": [
-        493,
-        545,
-        42,
-        91
+        0.34,
+        0.52,
+        0.05,
+        0.12
       ],
       "confidence": 0.9,
-      "notes": "Short pass made under pressure from an opponent."
+      "notes": "Shot on goal by player #9, saved by the keeper."
     },
     {
-      "event_id": "3196c80c-a901-417c-a496-c11c47087612",
-      "event_type": "tackle",
-      "player_jersey_number": "18",
-      "player_name": null,
-      "start_time": 991.8,
-      "end_time": 992.3,
-      "bounding_box": [
-        413,
-        452,
-        45,
-        93
-      ],
-      "confidence": 0.85,
-      "notes": "Successful tackle near the center of the field."
-    },
-    {
-      "event_id": "d1c0b39e-d3f3-4e42-9907-7e62704043b8",
-      "event_type": "tackle",
-      "player_jersey_number": "11",
-      "player_name": null,
-      "start_time": 999.3,
-      "end_time": 999.8,
-      "bounding_box": [
-        335,
-        467,
-        55,
-        102
-      ],
-      "confidence": 0.9,
-      "notes": "Sliding tackle to intercept a pass in the midfield."
-    },
-    {
-      "event_id": "c76f52e5-79a0-48e2-b13d-59d1e1f7d3d7",
+      "event_id": "50392f4e-a19f-4b08-b0a4-b05c567a505f",
       "event_type": "pass",
       "player_jersey_number": "11",
       "player_name": null,
-      "start_time": 1003.2,
-      "end_time": 1003.6,
+      "start_time": 50.8,
+      "end_time": 51.5,
       "bounding_box": [
-        478,
-        518,
-        48,
-        97
-      ],
-      "confidence": 0.95,
-      "notes": "Long pass played back towards the team's own goalkeeper."
-    },
-    {
-      "event_id": "a9a859e3-82b5-4122-832f-acdf2236d6c8",
-      "event_type": "pass",
-      "player_jersey_number": "11",
-      "player_name": null,
-      "start_time": 1033.4,
-      "end_time": 1033.7,
-      "bounding_box": [
-        347,
-        477,
-        46,
-        95
+        0.45,
+        0.52,
+        0.05,
+        0.12
       ],
       "confidence": 0.8,
-      "notes": "Simple short pass as part of the team's build-up play."
+      "notes": "Free kick pass into the penalty area."
+    },
+    {
+      "event_id": "8c0a2a3e-6d6f-479c-b2e1-4c6e6403073e",
+      "event_type": "pass",
+      "player_jersey_number": "4",
+      "player_name": null,
+      "start_time": 53,
+      "end_time": 53.6,
+      "bounding_box": [
+        0.72,
+        0.49,
+        0.04,
+        0.13
+      ],
+      "confidence": 0.75,
+      "notes": "Header attempt from a free kick. Misses the goal."
+    },
+    {
+      "event_id": "event_2",
+      "event_type": "tackle",
+      "player_jersey_number": "8",
+      "player_name": null,
+      "start_time": 58,
+      "end_time": 59,
+      "bounding_box": [
+        0.44,
+        0.59,
+        0.05,
+        0.14
+      ],
+      "confidence": 0.85,
+      "notes": "Tackle by maroon player #8 in the center circle."
+    },
+    {
+      "event_id": "893c834a-923c-4824-a131-72f5bbd5c56c",
+      "event_type": "pass",
+      "player_jersey_number": "10",
+      "player_name": null,
+      "start_time": 72.8,
+      "end_time": 73.5,
+      "bounding_box": [
+        0.654,
+        0.518,
+        0.038,
+        0.113
+      ],
+      "confidence": 0.95,
+      "notes": "Free kick pass into the opponent's box by the light blue team."
+    },
+    {
+      "event_id": "b5e9f88c-79a0-482e-9d2a-c7a6e12e3e9d",
+      "event_type": "pass",
+      "player_jersey_number": "3",
+      "player_name": null,
+      "start_time": 81.3,
+      "end_time": 81.9,
+      "bounding_box": [
+        0.451,
+        0.613,
+        0.042,
+        0.118
+      ],
+      "confidence": 0.85,
+      "notes": "Assist pass leading to the goal."
+    },
+    {
+      "event_id": "f5b6a71e-355c-4e89-9a2c-9a4f61f7c13a",
+      "event_type": "goal",
+      "player_jersey_number": "9",
+      "player_name": null,
+      "start_time": 82,
+      "end_time": 83.2,
+      "bounding_box": [
+        0.298,
+        0.556,
+        0.045,
+        0.125
+      ],
+      "confidence": 0.9,
+      "notes": "A player from the light blue team scores with a long-range shot from outside the penalty box."
+    },
+    {
+      "event_id": "834c441c-b265-4f7f-a65c-3f487e41b312",
+      "event_type": "goal",
+      "player_jersey_number": "8",
+      "player_name": null,
+      "start_time": 95.99,
+      "end_time": 97.16,
+      "bounding_box": [
+        0.725,
+        0.653,
+        0.041,
+        0.145
+      ],
+      "confidence": 0.95,
+      "notes": "Player in maroon scores with a shot from inside the penalty area."
+    },
+    {
+      "event_id": "2",
+      "event_type": "goal",
+      "player_jersey_number": "4",
+      "player_name": null,
+      "start_time": 108.8,
+      "end_time": 110.1,
+      "bounding_box": [
+        0.46,
+        0.75,
+        0.05,
+        0.15
+      ],
+      "confidence": 0.99,
+      "notes": "Player #4 (maroon) scores from a long-range free-kick."
+    },
+    {
+      "event_id": "e1f13a0c-60b6-4b47-b7d1-0f7f2b1c4a03",
+      "event_type": "pass",
+      "player_jersey_number": "21",
+      "player_name": null,
+      "start_time": 115,
+      "end_time": 115.8,
+      "bounding_box": [
+        0.75,
+        0.81,
+        0.05,
+        0.13
+      ],
+      "confidence": 0.9,
+      "notes": "Long pass from the right side to the left."
+    },
+    {
+      "event_id": "1",
+      "event_type": "tackle",
+      "player_jersey_number": null,
+      "player_name": null,
+      "start_time": 115.84,
+      "end_time": 117.11,
+      "bounding_box": [
+        0.6974,
+        0.5981,
+        0.0557,
+        0.1491
+      ],
+      "confidence": 0.85,
+      "notes": "Tackle by a player in a blue jersey to prevent a scoring chance from a player in a red jersey."
+    },
+    {
+      "event_id": "3",
+      "event_type": "pass",
+      "player_jersey_number": "10",
+      "player_name": null,
+      "start_time": 132.5,
+      "end_time": 133,
+      "bounding_box": [
+        0.49,
+        0.48,
+        0.04,
+        0.14
+      ],
+      "confidence": 0.95,
+      "notes": "Kick-off pass by player #10 (blue)."
+    },
+    {
+      "event_id": "2",
+      "event_type": "tackle",
+      "player_jersey_number": "10",
+      "player_name": null,
+      "start_time": 137.57,
+      "end_time": 138.87,
+      "bounding_box": [
+        0.6818,
+        0.8037,
+        0.076,
+        0.187
+      ],
+      "confidence": 0.9,
+      "notes": "Tackle near the sideline by player #10 in red."
+    },
+    {
+      "event_id": "97e6b0a8-b64d-440f-9d33-9f8a48b1d91a",
+      "event_type": "pass",
+      "player_jersey_number": "10",
+      "player_name": null,
+      "start_time": 147.78,
+      "end_time": 148.58,
+      "bounding_box": [
+        0.427,
+        0.509,
+        0.031,
+        0.12
+      ],
+      "confidence": 0.9,
+      "notes": "Kick-off pass by the team in maroon."
+    },
+    {
+      "event_id": "35e38d45-5d9c-448a-a48f-39f2204c35b5",
+      "event_type": "pass",
+      "player_jersey_number": null,
+      "player_name": null,
+      "start_time": 153.5,
+      "end_time": 154.5,
+      "bounding_box": [
+        0.27,
+        0.52,
+        0.05,
+        0.14
+      ],
+      "confidence": 0.9,
+      "notes": "Goalkeeper long kick."
+    },
+    {
+      "event_id": "4f9d22c5-5b4d-4e9b-9a8c-6e2d1d4d3d4b",
+      "event_type": "tackle",
+      "player_jersey_number": "1",
+      "player_name": null,
+      "start_time": 158.2,
+      "end_time": 159.3,
+      "bounding_box": [
+        0.443,
+        0.602,
+        0.052,
+        0.093
+      ],
+      "confidence": 0.85,
+      "notes": "A player from the maroon team makes a slide tackle."
+    },
+    {
+      "event_id": "b1b7470f-8b21-4f1d-93d3-780c128c86d8",
+      "event_type": "pass",
+      "player_jersey_number": "22",
+      "player_name": null,
+      "start_time": 159.9,
+      "end_time": 200.5,
+      "bounding_box": [
+        0.61,
+        0.38,
+        0.05,
+        0.13
+      ],
+      "confidence": 0.9,
+      "notes": "Shot on goal from distance, saved by the keeper."
+    },
+    {
+      "event_id": "06e6ab6e-e93c-4a37-9759-4ec4718dd2d7",
+      "event_type": "goal",
+      "player_jersey_number": "2",
+      "player_name": null,
+      "start_time": 166.4,
+      "end_time": 167.3,
+      "bounding_box": [
+        0.268,
+        0.598,
+        0.063,
+        0.169
+      ],
+      "confidence": 0.9,
+      "notes": "Goal scored during a tackle. The attacking player #2 in maroon is challenged, and the ball goes into the net."
+    },
+    {
+      "event_id": "event_3",
+      "event_type": "pass",
+      "player_jersey_number": "15",
+      "player_name": null,
+      "start_time": 167,
+      "end_time": 168.5,
+      "bounding_box": [
+        0.37,
+        0.55,
+        0.05,
+        0.13
+      ],
+      "confidence": 0.9,
+      "notes": "Shot from distance by blue player #15, misses the goal."
+    },
+    {
+      "event_id": "4",
+      "event_type": "tackle",
+      "player_jersey_number": null,
+      "player_name": null,
+      "start_time": 180.5,
+      "end_time": 181.5,
+      "bounding_box": [
+        0.75,
+        0.6,
+        0.1,
+        0.2
+      ],
+      "confidence": 0.85,
+      "notes": "Blue player tackles maroon player #11 near the sideline."
+    },
+    {
+      "event_id": "d0e1b2f9-7e5c-4a3d-8f9a-1b2c3d4e5f6a",
+      "event_type": "goal",
+      "player_jersey_number": "9",
+      "player_name": null,
+      "start_time": 211.1,
+      "end_time": 212.5,
+      "bounding_box": [
+        0.443,
+        0.509,
+        0.042,
+        0.139
+      ],
+      "confidence": 0.98,
+      "notes": "Goal from a direct free kick by the player in the light blue jersey."
+    },
+    {
+      "event_id": "3",
+      "event_type": "goal",
+      "player_jersey_number": null,
+      "player_name": null,
+      "start_time": 281.51,
+      "end_time": 285.48,
+      "bounding_box": [
+        0.8146,
+        0.4435,
+        0.049,
+        0.1556
+      ],
+      "confidence": 0.98,
+      "notes": "A player in a blue jersey scores a header goal from a corner kick."
+    },
+    {
+      "event_id": "f9e8d7c6-5b4d-4e9b-9a8c-6e2d1d4d3d4b",
+      "event_type": "tackle",
+      "player_jersey_number": null,
+      "player_name": null,
+      "start_time": 318,
+      "end_time": 319.5,
+      "bounding_box": [
+        0.48,
+        0.75,
+        0.08,
+        0.08
+      ],
+      "confidence": 0.8,
+      "notes": "A tackle leads to a foul, with a player from the maroon team on the ground."
+    },
+    {
+      "event_id": "a66f8d09-b7b5-4a5f-9e6b-a2c34c1b18d2",
+      "event_type": "pass",
+      "player_jersey_number": "22",
+      "player_name": null,
+      "start_time": 322.5,
+      "end_time": 323.5,
+      "bounding_box": [
+        0.24,
+        0.45,
+        0.05,
+        0.12
+      ],
+      "confidence": 0.9,
+      "notes": "Shot on goal saved by the keeper."
+    },
+    {
+      "event_id": "f5f5c531-e40b-478a-b9c1-4b15099b24b0",
+      "event_type": "tackle",
+      "player_jersey_number": null,
+      "player_name": null,
+      "start_time": 334.2,
+      "end_time": 335,
+      "bounding_box": [
+        0.77,
+        0.45,
+        0.07,
+        0.11
+      ],
+      "confidence": 0.85,
+      "notes": "Successful tackle inside the penalty area."
+    },
+    {
+      "event_id": "14f0a07e-75e1-4c12-9c4c-35928d1532f6",
+      "event_type": "tackle",
+      "player_jersey_number": "6",
+      "player_name": null,
+      "start_time": 347.11,
+      "end_time": 347.81,
+      "bounding_box": [
+        0.518,
+        0.556,
+        0.038,
+        0.144
+      ],
+      "confidence": 0.8,
+      "notes": "Player in blue tackles player in maroon in the midfield."
+    },
+    {
+      "event_id": "a3b2c1d0-6f4e-4b9d-9a8c-7e5d1b2c3d4e",
+      "event_type": "goal",
+      "player_jersey_number": "11",
+      "player_name": null,
+      "start_time": 352.2,
+      "end_time": 353.6,
+      "bounding_box": [
+        0.547,
+        0.37,
+        0.036,
+        0.13
+      ],
+      "confidence": 0.95,
+      "notes": "Goal from a long-range shot by the player in the light blue jersey."
+    },
+    {
+      "event_id": "4",
+      "event_type": "tackle",
+      "player_jersey_number": "5",
+      "player_name": null,
+      "start_time": 405,
+      "end_time": 407.2,
+      "bounding_box": [
+        0.4448,
+        0.5824,
+        0.0604,
+        0.1657
+      ],
+      "confidence": 0.88,
+      "notes": "Tackle by player #5 in red, resulting in a foul."
+    },
+    {
+      "event_id": "5",
+      "event_type": "goal",
+      "player_jersey_number": "11",
+      "player_name": null,
+      "start_time": 408,
+      "end_time": 409.2,
+      "bounding_box": [
+        0.8,
+        0.46,
+        0.04,
+        0.13
+      ],
+      "confidence": 0.98,
+      "notes": "Player #11 (blue) scores after receiving a pass in the penalty area."
+    },
+    {
+      "event_id": "834c7b80-6ac2-491c-8b89-948f21901a1f",
+      "event_type": "pass",
+      "player_jersey_number": "17",
+      "player_name": null,
+      "start_time": 421.21,
+      "end_time": 421.81,
+      "bounding_box": [
+        0.485,
+        0.482,
+        0.034,
+        0.121
+      ],
+      "confidence": 0.95,
+      "notes": "Kick-off pass to start the game."
+    },
+    {
+      "event_id": "d135c104-a957-414e-b53e-52b31495c64c",
+      "event_type": "tackle",
+      "player_jersey_number": "11",
+      "player_name": null,
+      "start_time": 426.87,
+      "end_time": 427.57,
+      "bounding_box": [
+        0.451,
+        0.443,
+        0.102,
+        0.151
+      ],
+      "confidence": 0.88,
+      "notes": "Sliding tackle by blue player on maroon player near the center of the field."
+    },
+    {
+      "event_id": "23a1005a-8b80-48e0-a43c-3995f36e84d4",
+      "event_type": "goal",
+      "player_jersey_number": "9",
+      "player_name": null,
+      "start_time": 427.5,
+      "end_time": 429.5,
+      "bounding_box": [
+        0.17,
+        0.42,
+        0.05,
+        0.15
+      ],
+      "confidence": 0.98,
+      "notes": "A player in a red jersey scores a goal from close range after a rebound from the goalkeeper."
+    },
+    {
+      "event_id": "060d5b99-a1d2-45e0-b6f7-b08709337e6b",
+      "event_type": "pass",
+      "player_jersey_number": "20",
+      "player_name": null,
+      "start_time": 428.03,
+      "end_time": 428.63,
+      "bounding_box": [
+        0.392,
+        0.481,
+        0.051,
+        0.123
+      ],
+      "confidence": 0.82,
+      "notes": "Quick pass by maroon player after being tackled."
+    },
+    {
+      "event_id": "event_4",
+      "event_type": "goal",
+      "player_jersey_number": "20",
+      "player_name": null,
+      "start_time": 434,
+      "end_time": 436,
+      "bounding_box": [
+        0.72,
+        0.45,
+        0.04,
+        0.12
+      ],
+      "confidence": 0.95,
+      "notes": "Goal scored with a header by maroon player #20 after a cross from the right."
+    },
+    {
+      "event_id": "42616f73-2e4a-4a7b-a496-d24ebf5c35b5",
+      "event_type": "tackle",
+      "player_jersey_number": "11",
+      "player_name": null,
+      "start_time": 456.52,
+      "end_time": 457.29,
+      "bounding_box": [
+        0.245,
+        0.352,
+        0.091,
+        0.155
+      ],
+      "confidence": 0.91,
+      "notes": "Blue player #11 wins the ball with a standing tackle."
+    },
+    {
+      "event_id": "c1f7b76e-3995-4654-8c8f-5197f8045610",
+      "event_type": "tackle",
+      "player_jersey_number": "11",
+      "player_name": null,
+      "start_time": 508.84,
+      "end_time": 509.54,
+      "bounding_box": [
+        0.377,
+        0.528,
+        0.045,
+        0.155
+      ],
+      "confidence": 0.85,
+      "notes": "Player in maroon tackles an opponent to regain possession."
+    },
+    {
+      "event_id": "c6b5a493-4a3d-4e9b-8f9a-1b2c3d4e5f6a",
+      "event_type": "pass",
+      "player_jersey_number": "9",
+      "player_name": null,
+      "start_time": 512.5,
+      "end_time": 513.8,
+      "bounding_box": [
+        0.26,
+        0.44,
+        0.05,
+        0.15
+      ],
+      "confidence": 0.85,
+      "notes": "A player from the maroon team makes a long pass from their own half."
+    },
+    {
+      "event_id": "6",
+      "event_type": "pass",
+      "player_jersey_number": "15",
+      "player_name": null,
+      "start_time": 532.5,
+      "end_time": 533,
+      "bounding_box": [
+        0.55,
+        0.55,
+        0.04,
+        0.13
+      ],
+      "confidence": 0.9,
+      "notes": "Pass in the midfield by player #15 (blue)."
+    },
+    {
+      "event_id": "f51604a1-b8d6-4447-910a-2009a63c6c0e",
+      "event_type": "goal",
+      "player_jersey_number": "10",
+      "player_name": null,
+      "start_time": 546.58,
+      "end_time": 547.61,
+      "bounding_box": [
+        0.211,
+        0.452,
+        0.063,
+        0.133
+      ],
+      "confidence": 0.98,
+      "notes": "Goal scored by player #10 with a shot from inside the penalty area."
+    },
+    {
+      "event_id": "f5d023a1-9a7c-4734-9243-7f2878d655f4",
+      "event_type": "pass",
+      "player_jersey_number": null,
+      "player_name": null,
+      "start_time": 597.9,
+      "end_time": 598.7,
+      "bounding_box": [
+        0.323,
+        0.609,
+        0.042,
+        0.13
+      ],
+      "confidence": 0.75,
+      "notes": "Long pass from a player in blue from his own half."
+    },
+    {
+      "event_id": "d0e1b2f9-46c5-430c-a9d2-b06c6b8c8d20",
+      "event_type": "pass",
+      "player_jersey_number": "17",
+      "player_name": null,
+      "start_time": 633.8,
+      "end_time": 634.3,
+      "bounding_box": [
+        0.73,
+        0.35,
+        0.05,
+        0.13
+      ],
+      "confidence": 0.9,
+      "notes": "Assist pass leading to a goal."
+    },
+    {
+      "event_id": "c7a8b9e0-32d1-412f-87a3-5c0b1f2e3d4f",
+      "event_type": "goal",
+      "player_jersey_number": "13",
+      "player_name": null,
+      "start_time": 634.5,
+      "end_time": 635.5,
+      "bounding_box": [
+        0.77,
+        0.45,
+        0.06,
+        0.14
+      ],
+      "confidence": 0.99,
+      "notes": "Goal scored by player #13."
+    },
+    {
+      "event_id": "event_5",
+      "event_type": "goal",
+      "player_jersey_number": "17",
+      "player_name": null,
+      "start_time": 691,
+      "end_time": 693,
+      "bounding_box": [
+        0.31,
+        0.44,
+        0.05,
+        0.14
+      ],
+      "confidence": 0.98,
+      "notes": "Goal by blue player #17 after receiving a long through ball."
+    },
+    {
+      "event_id": "7",
+      "event_type": "tackle",
+      "player_jersey_number": "11",
+      "player_name": null,
+      "start_time": 842,
+      "end_time": 842.8,
+      "bounding_box": [
+        0.72,
+        0.38,
+        0.08,
+        0.15
+      ],
+      "confidence": 0.88,
+      "notes": "Tackle by player #11 (blue)."
+    },
+    {
+      "event_id": "event_6",
+      "event_type": "tackle",
+      "player_jersey_number": "5",
+      "player_name": null,
+      "start_time": 999.5,
+      "end_time": 1000.5,
+      "bounding_box": [
+        0.41,
+        0.48,
+        0.06,
+        0.16
+      ],
+      "confidence": 0.75,
+      "notes": "Tackle by a maroon defender to stop an attack."
+    },
+    {
+      "event_id": "8",
+      "event_type": "goal",
+      "player_jersey_number": "11",
+      "player_name": null,
+      "start_time": 1336,
+      "end_time": 1337.2,
+      "bounding_box": [
+        0.23,
+        0.4,
+        0.05,
+        0.15
+      ],
+      "confidence": 0.99,
+      "notes": "Player #11 (maroon) dribbles past a defender and scores."
+    },
+    {
+      "event_id": "event_7",
+      "event_type": "goal",
+      "player_jersey_number": "11",
+      "player_name": null,
+      "start_time": 1416,
+      "end_time": 1417.5,
+      "bounding_box": [
+        0.67,
+        0.38,
+        0.06,
+        0.15
+      ],
+      "confidence": 0.95,
+      "notes": "Maroon player #11 dribbles into the box and scores."
+    },
+    {
+      "event_id": "event_8",
+      "event_type": "goal",
+      "player_jersey_number": "17",
+      "player_name": null,
+      "start_time": 1626,
+      "end_time": 1627.5,
+      "bounding_box": [
+        0.33,
+        0.48,
+        0.06,
+        0.14
+      ],
+      "confidence": 0.97,
+      "notes": "Blue player #17 scores with a shot from the edge of the penalty area."
+    },
+    {
+      "event_id": "9",
+      "event_type": "goal",
+      "player_jersey_number": "9",
+      "player_name": null,
+      "start_time": 1667.5,
+      "end_time": 1668.5,
+      "bounding_box": [
+        0.2,
+        0.5,
+        0.06,
+        0.16
+      ],
+      "confidence": 0.98,
+      "notes": "Player #9 (blue) scores from inside the penalty area."
+    },
+    {
+      "event_id": "10",
+      "event_type": "goal",
+      "player_jersey_number": "10",
+      "player_name": null,
+      "start_time": 1774,
+      "end_time": 1775,
+      "bounding_box": [
+        0.21,
+        0.52,
+        0.05,
+        0.15
+      ],
+      "confidence": 0.97,
+      "notes": "Player #10 (blue) scores with a header from a cross by player #11."
+    },
+    {
+      "event_id": "event_9",
+      "event_type": "pass",
+      "player_jersey_number": "17",
+      "player_name": null,
+      "start_time": 1871.5,
+      "end_time": 1872.5,
+      "bounding_box": [
+        0.47,
+        0.65,
+        0.05,
+        0.14
+      ],
+      "confidence": 0.8,
+      "notes": "Pass in midfield by blue player #17."
+    },
+    {
+      "event_id": "event_10",
+      "event_type": "tackle",
+      "player_jersey_number": "5",
+      "player_name": null,
+      "start_time": 2334.8,
+      "end_time": 2335.8,
+      "bounding_box": [
+        0.45,
+        0.58,
+        0.07,
+        0.09
+      ],
+      "confidence": 0.9,
+      "notes": "Sliding tackle by blue player #5 to dispossess the opponent."
+    },
+    {
+      "event_id": "event_11",
+      "event_type": "goal",
+      "player_jersey_number": "11",
+      "player_name": null,
+      "start_time": 2374,
+      "end_time": 2375.5,
+      "bounding_box": [
+        0.72,
+        0.43,
+        0.05,
+        0.15
+      ],
+      "confidence": 0.96,
+      "notes": "Maroon player #11 scores a goal with a low shot into the corner."
+    },
+    {
+      "event_id": "c1682845-63e8-466d-886c-859a72005a76",
+      "event_type": "goal",
+      "player_jersey_number": "9",
+      "player_name": null,
+      "start_time": 3787,
+      "end_time": 3789,
+      "bounding_box": [
+        0.24,
+        0.48,
+        0.06,
+        0.16
+      ],
+      "confidence": 0.99,
+      "notes": "The player with jersey number 9 scores a goal for the red team after dribbling past a defender."
+    },
+    {
+      "event_id": "5f6e62c1-d419-482a-a7e8-e160e9d6d45e",
+      "event_type": "goal",
+      "player_jersey_number": "19",
+      "player_name": null,
+      "start_time": 3939.2,
+      "end_time": 3941.2,
+      "bounding_box": [
+        0.45,
+        0.45,
+        0.04,
+        0.1
+      ],
+      "confidence": 0.95,
+      "notes": "A long-distance shot results in a goal for the red team."
+    },
+    {
+      "event_id": "8905a96d-b8d2-4d1e-9a99-b1338dfd12c8",
+      "event_type": "tackle",
+      "player_jersey_number": "17",
+      "player_name": null,
+      "start_time": 4240.3,
+      "end_time": 4241.3,
+      "bounding_box": [
+        0.58,
+        0.35,
+        0.08,
+        0.18
+      ],
+      "confidence": 0.9,
+      "notes": "A player in a blue jersey tackles a player in a red jersey."
+    },
+    {
+      "event_id": "a9e6918a-f5b2-4d14-8745-f04b2b7a9442",
+      "event_type": "goal",
+      "player_jersey_number": "17",
+      "player_name": null,
+      "start_time": 4409,
+      "end_time": 4411,
+      "bounding_box": [
+        0.2,
+        0.5,
+        0.05,
+        0.15
+      ],
+      "confidence": 0.97,
+      "notes": "The player with jersey number 17 scores a goal for the red team."
+    },
+    {
+      "event_id": "e6720d2d-74d7-464a-9e12-32a2c3a5160e",
+      "event_type": "pass",
+      "player_jersey_number": "8",
+      "player_name": null,
+      "start_time": 4638.1,
+      "end_time": 4639.1,
+      "bounding_box": [
+        0.48,
+        0.6,
+        0.05,
+        0.15
+      ],
+      "confidence": 0.88,
+      "notes": "A short pass made by a player in a red jersey in the midfield."
     }
   ],
   "notes": "Merged from Gemini chunk outputs"
