@@ -59,7 +59,7 @@ const App: React.FC = () => {
     if (!note) return null;
     const text = note.toLowerCase();
     if (text.includes("red") || text.includes("maroon")) return "red";
-    if (text.includes("blue")) return "blue";
+    if (text.includes("blue") || text.includes("light blue")) return "blue";
     return null;
   };
 
@@ -69,21 +69,23 @@ const App: React.FC = () => {
     data.summary.players.forEach((p) => {
       const jersey =
         p.player_jersey_number || p.jersey_number || p.player_name || null;
-      if (jersey && p.team) {
-        jerseyToTeam.set(jersey.trim(), p.team.toLowerCase());
+      const team = p.team || inferTeamFromNotes(p.notes || "");
+      if (jersey && team) {
+        jerseyToTeam.set(jersey.trim(), team.toLowerCase());
       }
     });
   }
 
-  // Process event list
+  // --- Normalize Events ---
   const processedEvents = events.map((ev) => {
     const jersey = ev.player_jersey_number ?? ev.player_name ?? null;
     let team: string | null = null;
 
-    if (jersey && jerseyToTeam.has(jersey)) {
-      team = jerseyToTeam.get(jersey)!;
-    } else if (ev.team) {
+    // Priority: ev.team > jerseyToTeam > infer from notes
+    if (ev.team) {
       team = ev.team.toLowerCase();
+    } else if (jersey && jerseyToTeam.has(jersey)) {
+      team = jerseyToTeam.get(jersey)!;
     } else {
       team = inferTeamFromNotes(ev.notes);
     }
@@ -91,6 +93,7 @@ const App: React.FC = () => {
     return { ...ev, team };
   });
 
+  // --- Group events by type for each team ---
   const groupByType = (team: string) => {
     const filtered = processedEvents.filter((e) => e.team === team);
     return {
@@ -119,6 +122,7 @@ const App: React.FC = () => {
         Football Player Analytics
       </motion.h1>
 
+      {/* Upload section */}
       <div className="mb-8">
         <UploadSection
           compact={!!data}
@@ -128,6 +132,7 @@ const App: React.FC = () => {
         />
       </div>
 
+      {/* Uploading and processing indicators */}
       {uploading && !data && (
         <div className="max-w-4xl mx-auto mt-8">
           <div className="p-6 text-center border border-gray-800 rounded-2xl bg-gray-900/60">
@@ -144,6 +149,7 @@ const App: React.FC = () => {
         </div>
       )}
 
+      {/* Error */}
       {error && (
         <div className="max-w-4xl mx-auto mt-6">
           <div className="p-4 text-center text-red-400 border border-red-500/40 rounded-xl bg-red-900/10">
@@ -152,6 +158,7 @@ const App: React.FC = () => {
         </div>
       )}
 
+      {/* Results */}
       <main className="mx-auto space-y-8 max-w-7xl">
         {data?.summary && (
           <SummaryAndCounts events={events} summaryPayload={data.summary} />
@@ -199,10 +206,12 @@ const App: React.FC = () => {
                 ))}
               </section>
             </div>
+
+            {/* UNDERTMINED TEAM — vertical stacking */}
             {Object.values(undetermined).some((arr) => arr.length > 0) && (
               <section className="mt-12">
                 <h2 className="mb-4 text-2xl font-semibold text-yellow-400">
-                  Undetermined Team
+                  🟡 Undetermined Team
                 </h2>
 
                 <div className="flex flex-col gap-8">
