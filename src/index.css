@@ -8,7 +8,9 @@ html {
 
 body {
   @apply text-white font-lato;
-  background: linear-gradient(to right, #0D1B2A, #1B263B);
+  background: linear-gradient(180deg, #0D1B2A, #1B263B, #0D1B2A);
+  background-size: 400% 400%;
+  animation: scroll-gradient 20s ease infinite;
   min-height: 100vh;
 }
 
@@ -20,6 +22,7 @@ label {
   @apply font-inter;
 }
 
+/* 🔄 Rotating gradient utility */
 @keyframes gradient-rotate {
   0% {
     transform: rotate(0deg);
@@ -31,4 +34,31 @@ label {
 
 .animate-gradient-rotate {
   animation: gradient-rotate 6s linear infinite;
+}
+
+/* 🌈 Smooth scrolling background gradient animation */
+@keyframes scroll-gradient {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+/* Optional: make scrollbar blend nicely with dark gradient */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #415A77, #778DA9);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0D1B2A;
 }

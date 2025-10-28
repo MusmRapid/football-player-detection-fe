@@ -4,58 +4,50 @@
       {
         "player_jersey_number": "17",
         "player_name": null,
-        "notes": "Blue team",
-        "team": "blue"
+        "notes": "Blue team"
       },
       {
         "player_jersey_number": "11",
         "player_name": null,
-        "notes": "Blue team",
-        "team": "blue"
+        "notes": "Blue team"
       },
       {
         "player_jersey_number": "10",
         "player_name": null,
-        "notes": "Blue team",
-        "team": "blue"
+        "notes": "Blue team"
       },
       {
         "player_jersey_number": "20",
         "player_name": null,
-        "notes": "Maroon team",
-        "team": "red"
+        "notes": "Maroon team"
       },
       {
         "player_jersey_number": "8",
         "player_name": null,
-        "notes": "Team in maroon",
-        "team": "red"
+        "notes": "Team in maroon"
       },
       {
         "player_jersey_number": "2",
         "player_name": null,
-        "notes": "Team in maroon",
-        "team": "red"
+        "notes": "Team in maroon"
       },
       {
         "player_jersey_number": "6",
         "player_name": null,
-        "notes": "Team in blue",
-        "team": "blue"
+        "notes": "Team in blue"
       },
       {
         "player_jersey_number": "11",
         "player_name": null,
-        "notes": "Team in maroon",
-        "team": "blue"
+        "notes": "Team in maroon"
       },
       {
         "jersey_number": "4",
-        "team": "red"
+        "team": "maroon"
       },
       {
         "jersey_number": "11",
-        "team": "blue"
+        "team": "maroon"
       },
       {
         "jersey_number": "9",
@@ -75,22 +67,22 @@
       },
       {
         "player_jersey_number": "9",
-        "team": "blue",
+        "team": "Red",
         "notes": "Scored two goals."
       },
       {
         "player_jersey_number": "19",
-        "team": "red",
+        "team": "Red",
         "notes": "Scored a long-distance goal."
       },
       {
         "player_jersey_number": "17",
-        "team": "blue",
+        "team": "Red",
         "notes": "Scored a goal."
       },
       {
         "player_jersey_number": "8",
-        "team": "red",
+        "team": "Red",
         "notes": ""
       },
       {
@@ -100,23 +92,21 @@
       },
       {
         "player_jersey_number": "12",
-        "team": "blue",
+        "team": "Blue",
         "notes": ""
       },
       {
         "player_jersey_number": "17",
-        "team": "blue",
+        "team": "Blue",
         "notes": ""
       },
       {
         "player_name": null,
-        "player_jersey_number": "11",
-        "team": "blue"
+        "player_jersey_number": "11"
       },
       {
         "player_name": null,
-        "player_jersey_number": "4",
-        "team": "red"
+        "player_jersey_number": "4"
       },
       {
         "player_name": null,
@@ -124,8 +114,7 @@
       },
       {
         "player_name": null,
-        "player_jersey_number": "5",
-        "team": "red"
+        "player_jersey_number": "5"
       },
       {
         "player_name": null,
@@ -133,13 +122,11 @@
       },
       {
         "player_name": null,
-        "player_jersey_number": "17",
-        "team": "blue"
+        "player_jersey_number": "17"
       },
       {
         "player_name": null,
-        "player_jersey_number": "13",
-        "team": "red"
+        "player_jersey_number": "13"
       }
     ]
   },
@@ -158,7 +145,8 @@
         0.14
       ],
       "confidence": 0.8,
-      "notes": "Pass from the left side of the field back towards the center."
+      "notes": "Pass from the left side of the field back towards the center.",
+      "team": "blue"
     },
     {
       "event_id": "0d2c67ef-3172-4696-98ec-668b5e9b816a",
@@ -174,7 +162,8 @@
         0.18
       ],
       "confidence": 0.85,
-      "notes": "A player in a red jersey tackles a player in a blue jersey in the center circle."
+      "notes": "A player in a red jersey tackles a player in a blue jersey in the center circle.",
+      "team": "red"
     },
     {
       "event_id": "1",
@@ -190,7 +179,8 @@
         0.18
       ],
       "confidence": 0.8,
-      "notes": "Maroon player tackles a blue player, resulting in a foul."
+      "notes": "Maroon player tackles a blue player, resulting in a foul.",
+      "team": "red"
     },
     {
       "event_id": "f5f29910-c447-4933-90d0-aa51c360098f",
@@ -206,7 +196,8 @@
         0.12
       ],
       "confidence": 0.82,
-      "notes": "A pass made by a player in a blue jersey in the midfield."
+      "notes": "A pass made by a player in a blue jersey in the midfield.",
+      "team": "blue"
     },
     {
       "event_id": "event_1",
@@ -222,7 +213,8 @@
         0.12
       ],
       "confidence": 0.9,
-      "notes": "Shot on goal by player #9, saved by the keeper."
+      "notes": "Shot on goal by player #9, saved by the keeper.",
+      "team": "red"
     },
     {
       "event_id": "50392f4e-a19f-4b08-b0a4-b05c567a505f",
@@ -238,7 +230,8 @@
         0.12
       ],
       "confidence": 0.8,
-      "notes": "Free kick pass into the penalty area."
+      "notes": "Free kick pass into the penalty area.",
+      "team": "red"
     },
     {
       "event_id": "8c0a2a3e-6d6f-479c-b2e1-4c6e6403073e",
@@ -254,7 +247,8 @@
         0.13
       ],
       "confidence": 0.75,
-      "notes": "Header attempt from a free kick. Misses the goal."
+      "notes": "Header attempt from a free kick. Misses the goal.",
+      "team": "red"
     },
     {
       "event_id": "event_2",
@@ -270,7 +264,8 @@
         0.14
       ],
       "confidence": 0.85,
-      "notes": "Tackle by maroon player #8 in the center circle."
+      "notes": "Tackle by maroon player #8 in the center circle.",
+      "team": "red"
     },
     {
       "event_id": "893c834a-923c-4824-a131-72f5bbd5c56c",
@@ -286,7 +281,8 @@
         0.113
       ],
       "confidence": 0.95,
-      "notes": "Free kick pass into the opponent's box by the light blue team."
+      "notes": "Free kick pass into the opponent's box by the light blue team.",
+      "team": "blue"
     },
     {
       "event_id": "b5e9f88c-79a0-482e-9d2a-c7a6e12e3e9d",
@@ -302,7 +298,8 @@
         0.118
       ],
       "confidence": 0.85,
-      "notes": "Assist pass leading to the goal."
+      "notes": "Assist pass leading to the goal.",
+      "team": "red"
     },
     {
       "event_id": "f5b6a71e-355c-4e89-9a2c-9a4f61f7c13a",
@@ -318,7 +315,8 @@
         0.125
       ],
       "confidence": 0.9,
-      "notes": "A player from the light blue team scores with a long-range shot from outside the penalty box."
+      "notes": "A player from the light blue team scores with a long-range shot from outside the penalty box.",
+      "team": "blue"
     },
     {
       "event_id": "834c441c-b265-4f7f-a65c-3f487e41b312",
@@ -334,7 +332,8 @@
         0.145
       ],
       "confidence": 0.95,
-      "notes": "Player in maroon scores with a shot from inside the penalty area."
+      "notes": "Player in maroon scores with a shot from inside the penalty area.",
+      "team": "red"
     },
     {
       "event_id": "2",
@@ -350,7 +349,8 @@
         0.15
       ],
       "confidence": 0.99,
-      "notes": "Player #4 (maroon) scores from a long-range free-kick."
+      "notes": "Player #4 (maroon) scores from a long-range free-kick.",
+      "team": "red"
     },
     {
       "event_id": "e1f13a0c-60b6-4b47-b7d1-0f7f2b1c4a03",
@@ -366,7 +366,8 @@
         0.13
       ],
       "confidence": 0.9,
-      "notes": "Long pass from the right side to the left."
+      "notes": "Long pass from the right side to the left.",
+      "team": "blue"
     },
     {
       "event_id": "1",
@@ -382,7 +383,8 @@
         0.1491
       ],
       "confidence": 0.85,
-      "notes": "Tackle by a player in a blue jersey to prevent a scoring chance from a player in a red jersey."
+      "notes": "Tackle by a player in a blue jersey to prevent a scoring chance from a player in a red jersey.",
+      "team": "blue"
     },
     {
       "event_id": "3",
@@ -398,7 +400,8 @@
         0.14
       ],
       "confidence": 0.95,
-      "notes": "Kick-off pass by player #10 (blue)."
+      "notes": "Kick-off pass by player #10 (blue).",
+      "team": "blue"
     },
     {
       "event_id": "2",
@@ -414,7 +417,8 @@
         0.187
       ],
       "confidence": 0.9,
-      "notes": "Tackle near the sideline by player #10 in red."
+      "notes": "Tackle near the sideline by player #10 in red.",
+      "team": "red"
     },
     {
       "event_id": "97e6b0a8-b64d-440f-9d33-9f8a48b1d91a",
@@ -430,7 +434,8 @@
         0.12
       ],
       "confidence": 0.9,
-      "notes": "Kick-off pass by the team in maroon."
+      "notes": "Kick-off pass by the team in maroon.",
+      "team": "red"
     },
     {
       "event_id": "35e38d45-5d9c-448a-a48f-39f2204c35b5",
@@ -446,7 +451,8 @@
         0.14
       ],
       "confidence": 0.9,
-      "notes": "Goalkeeper long kick."
+      "notes": "Goalkeeper long kick.",
+      "team": "red"
     },
     {
       "event_id": "4f9d22c5-5b4d-4e9b-9a8c-6e2d1d4d3d4b",
@@ -462,7 +468,8 @@
         0.093
       ],
       "confidence": 0.85,
-      "notes": "A player from the maroon team makes a slide tackle."
+      "notes": "A player from the maroon team makes a slide tackle.",
+      "team": "red"
     },
     {
       "event_id": "b1b7470f-8b21-4f1d-93d3-780c128c86d8",
@@ -478,7 +485,8 @@
         0.13
       ],
       "confidence": 0.9,
-      "notes": "Shot on goal from distance, saved by the keeper."
+      "notes": "Shot on goal from distance, saved by the keeper.",
+      "team": "red"
     },
     {
       "event_id": "06e6ab6e-e93c-4a37-9759-4ec4718dd2d7",
@@ -494,7 +502,8 @@
         0.169
       ],
       "confidence": 0.9,
-      "notes": "Goal scored during a tackle. The attacking player #2 in maroon is challenged, and the ball goes into the net."
+      "notes": "Goal scored during a tackle. The attacking player #2 in maroon is challenged, and the ball goes into the net.",
+      "team": "red"
     },
     {
       "event_id": "event_3",
@@ -510,7 +519,8 @@
         0.13
       ],
       "confidence": 0.9,
-      "notes": "Shot from distance by blue player #15, misses the goal."
+      "notes": "Shot from distance by blue player #15, misses the goal.",
+      "team": "blue"
     },
     {
       "event_id": "4",
@@ -526,7 +536,8 @@
         0.2
       ],
       "confidence": 0.85,
-      "notes": "Blue player tackles maroon player #11 near the sideline."
+      "notes": "Blue player tackles maroon player #11 near the sideline.",
+      "team": "blue"
     },
     {
       "event_id": "d0e1b2f9-7e5c-4a3d-8f9a-1b2c3d4e5f6a",
@@ -542,7 +553,8 @@
         0.139
       ],
       "confidence": 0.98,
-      "notes": "Goal from a direct free kick by the player in the light blue jersey."
+      "notes": "Goal from a direct free kick by the player in the light blue jersey.",
+      "team": "blue"
     },
     {
       "event_id": "3",
@@ -558,7 +570,8 @@
         0.1556
       ],
       "confidence": 0.98,
-      "notes": "A player in a blue jersey scores a header goal from a corner kick."
+      "notes": "A player in a blue jersey scores a header goal from a corner kick.",
+      "team": "blue"
     },
     {
       "event_id": "f9e8d7c6-5b4d-4e9b-9a8c-6e2d1d4d3d4b",
@@ -574,7 +587,8 @@
         0.08
       ],
       "confidence": 0.8,
-      "notes": "A tackle leads to a foul, with a player from the maroon team on the ground."
+      "notes": "A tackle leads to a foul, with a player from the maroon team on the ground.",
+      "team": "red"
     },
     {
       "event_id": "a66f8d09-b7b5-4a5f-9e6b-a2c34c1b18d2",
@@ -590,7 +604,8 @@
         0.12
       ],
       "confidence": 0.9,
-      "notes": "Shot on goal saved by the keeper."
+      "notes": "Shot on goal saved by the keeper.",
+      "team": "red"
     },
     {
       "event_id": "f5f5c531-e40b-478a-b9c1-4b15099b24b0",
@@ -606,7 +621,8 @@
         0.11
       ],
       "confidence": 0.85,
-      "notes": "Successful tackle inside the penalty area."
+      "notes": "Successful tackle inside the penalty area.",
+      "team": "red"
     },
     {
       "event_id": "14f0a07e-75e1-4c12-9c4c-35928d1532f6",
@@ -622,7 +638,8 @@
         0.144
       ],
       "confidence": 0.8,
-      "notes": "Player in blue tackles player in maroon in the midfield."
+      "notes": "Player in blue tackles player in maroon in the midfield.",
+      "team": "blue"
     },
     {
       "event_id": "a3b2c1d0-6f4e-4b9d-9a8c-7e5d1b2c3d4e",
@@ -638,7 +655,8 @@
         0.13
       ],
       "confidence": 0.95,
-      "notes": "Goal from a long-range shot by the player in the light blue jersey."
+      "notes": "Goal from a long-range shot by the player in the light blue jersey.",
+      "team": "blue"
     },
     {
       "event_id": "4",
@@ -654,7 +672,8 @@
         0.1657
       ],
       "confidence": 0.88,
-      "notes": "Tackle by player #5 in red, resulting in a foul."
+      "notes": "Tackle by player #5 in red, resulting in a foul.",
+      "team": "red"
     },
     {
       "event_id": "5",
@@ -670,7 +689,8 @@
         0.13
       ],
       "confidence": 0.98,
-      "notes": "Player #11 (blue) scores after receiving a pass in the penalty area."
+      "notes": "Player #11 (blue) scores after receiving a pass in the penalty area.",
+      "team": "blue"
     },
     {
       "event_id": "834c7b80-6ac2-491c-8b89-948f21901a1f",
@@ -686,7 +706,8 @@
         0.121
       ],
       "confidence": 0.95,
-      "notes": "Kick-off pass to start the game."
+      "notes": "Kick-off pass to start the game.",
+      "team": "blue"
     },
     {
       "event_id": "d135c104-a957-414e-b53e-52b31495c64c",
@@ -702,7 +723,8 @@
         0.151
       ],
       "confidence": 0.88,
-      "notes": "Sliding tackle by blue player on maroon player near the center of the field."
+      "notes": "Sliding tackle by blue player on maroon player near the center of the field.",
+      "team": "blue"
     },
     {
       "event_id": "23a1005a-8b80-48e0-a43c-3995f36e84d4",
@@ -718,7 +740,8 @@
         0.15
       ],
       "confidence": 0.98,
-      "notes": "A player in a red jersey scores a goal from close range after a rebound from the goalkeeper."
+      "notes": "A player in a red jersey scores a goal from close range after a rebound from the goalkeeper.",
+      "team": "red"
     },
     {
       "event_id": "060d5b99-a1d2-45e0-b6f7-b08709337e6b",
@@ -734,7 +757,8 @@
         0.123
       ],
       "confidence": 0.82,
-      "notes": "Quick pass by maroon player after being tackled."
+      "notes": "Quick pass by maroon player after being tackled.",
+      "team": "red"
     },
     {
       "event_id": "event_4",
@@ -750,7 +774,8 @@
         0.12
       ],
       "confidence": 0.95,
-      "notes": "Goal scored with a header by maroon player #20 after a cross from the right."
+      "notes": "Goal scored with a header by maroon player #20 after a cross from the right.",
+      "team": "red"
     },
     {
       "event_id": "42616f73-2e4a-4a7b-a496-d24ebf5c35b5",
@@ -766,7 +791,8 @@
         0.155
       ],
       "confidence": 0.91,
-      "notes": "Blue player #11 wins the ball with a standing tackle."
+      "notes": "Blue player #11 wins the ball with a standing tackle.",
+      "team": "blue"
     },
     {
       "event_id": "c1f7b76e-3995-4654-8c8f-5197f8045610",
@@ -782,7 +808,8 @@
         0.155
       ],
       "confidence": 0.85,
-      "notes": "Player in maroon tackles an opponent to regain possession."
+      "notes": "Player in maroon tackles an opponent to regain possession.",
+      "team": "red"
     },
     {
       "event_id": "c6b5a493-4a3d-4e9b-8f9a-1b2c3d4e5f6a",
@@ -798,7 +825,8 @@
         0.15
       ],
       "confidence": 0.85,
-      "notes": "A player from the maroon team makes a long pass from their own half."
+      "notes": "A player from the maroon team makes a long pass from their own half.",
+      "team": "red"
     },
     {
       "event_id": "6",
@@ -814,7 +842,8 @@
         0.13
       ],
       "confidence": 0.9,
-      "notes": "Pass in the midfield by player #15 (blue)."
+      "notes": "Pass in the midfield by player #15 (blue).",
+      "team": "blue"
     },
     {
       "event_id": "f51604a1-b8d6-4447-910a-2009a63c6c0e",
@@ -830,7 +859,8 @@
         0.133
       ],
       "confidence": 0.98,
-      "notes": "Goal scored by player #10 with a shot from inside the penalty area."
+      "notes": "Goal scored by player #10 with a shot from inside the penalty area.",
+      "team": "blue"
     },
     {
       "event_id": "f5d023a1-9a7c-4734-9243-7f2878d655f4",
@@ -846,7 +876,8 @@
         0.13
       ],
       "confidence": 0.75,
-      "notes": "Long pass from a player in blue from his own half."
+      "notes": "Long pass from a player in blue from his own half.",
+      "team": "blue"
     },
     {
       "event_id": "d0e1b2f9-46c5-430c-a9d2-b06c6b8c8d20",
@@ -862,7 +893,8 @@
         0.13
       ],
       "confidence": 0.9,
-      "notes": "Assist pass leading to a goal."
+      "notes": "Assist pass leading to a goal.",
+      "team": "blue"
     },
     {
       "event_id": "c7a8b9e0-32d1-412f-87a3-5c0b1f2e3d4f",
@@ -878,7 +910,8 @@
         0.14
       ],
       "confidence": 0.99,
-      "notes": "Goal scored by player #13."
+      "notes": "Goal scored by player #13.",
+      "team": "red"
     },
     {
       "event_id": "event_5",
@@ -894,7 +927,8 @@
         0.14
       ],
       "confidence": 0.98,
-      "notes": "Goal by blue player #17 after receiving a long through ball."
+      "notes": "Goal by blue player #17 after receiving a long through ball.",
+      "team": "blue"
     },
     {
       "event_id": "7",
@@ -910,7 +944,8 @@
         0.15
       ],
       "confidence": 0.88,
-      "notes": "Tackle by player #11 (blue)."
+      "notes": "Tackle by player #11 (blue).",
+      "team": "blue"
     },
     {
       "event_id": "event_6",
@@ -926,7 +961,8 @@
         0.16
       ],
       "confidence": 0.75,
-      "notes": "Tackle by a maroon defender to stop an attack."
+      "notes": "Tackle by a maroon defender to stop an attack.",
+      "team": "red"
     },
     {
       "event_id": "8",
@@ -942,7 +978,8 @@
         0.15
       ],
       "confidence": 0.99,
-      "notes": "Player #11 (maroon) dribbles past a defender and scores."
+      "notes": "Player #11 (maroon) dribbles past a defender and scores.",
+      "team": "red"
     },
     {
       "event_id": "event_7",
@@ -958,7 +995,8 @@
         0.15
       ],
       "confidence": 0.95,
-      "notes": "Maroon player #11 dribbles into the box and scores."
+      "notes": "Maroon player #11 dribbles into the box and scores.",
+      "team": "red"
     },
     {
       "event_id": "event_8",
@@ -974,7 +1012,8 @@
         0.14
       ],
       "confidence": 0.97,
-      "notes": "Blue player #17 scores with a shot from the edge of the penalty area."
+      "notes": "Blue player #17 scores with a shot from the edge of the penalty area.",
+      "team": "blue"
     },
     {
       "event_id": "9",
@@ -990,7 +1029,8 @@
         0.16
       ],
       "confidence": 0.98,
-      "notes": "Player #9 (blue) scores from inside the penalty area."
+      "notes": "Player #9 (blue) scores from inside the penalty area.",
+      "team": "blue"
     },
     {
       "event_id": "10",
@@ -1006,7 +1046,8 @@
         0.15
       ],
       "confidence": 0.97,
-      "notes": "Player #10 (blue) scores with a header from a cross by player #11."
+      "notes": "Player #10 (blue) scores with a header from a cross by player #11.",
+      "team": "blue"
     },
     {
       "event_id": "event_9",
@@ -1022,7 +1063,8 @@
         0.14
       ],
       "confidence": 0.8,
-      "notes": "Pass in midfield by blue player #17."
+      "notes": "Pass in midfield by blue player #17.",
+      "team": "blue"
     },
     {
       "event_id": "event_10",
@@ -1038,7 +1080,8 @@
         0.09
       ],
       "confidence": 0.9,
-      "notes": "Sliding tackle by blue player #5 to dispossess the opponent."
+      "notes": "Sliding tackle by blue player #5 to dispossess the opponent.",
+      "team": "blue"
     },
     {
       "event_id": "event_11",
@@ -1054,7 +1097,8 @@
         0.15
       ],
       "confidence": 0.96,
-      "notes": "Maroon player #11 scores a goal with a low shot into the corner."
+      "notes": "Maroon player #11 scores a goal with a low shot into the corner.",
+      "team": "red"
     },
     {
       "event_id": "c1682845-63e8-466d-886c-859a72005a76",
@@ -1070,7 +1114,8 @@
         0.16
       ],
       "confidence": 0.99,
-      "notes": "The player with jersey number 9 scores a goal for the red team after dribbling past a defender."
+      "notes": "The player with jersey number 9 scores a goal for the red team after dribbling past a defender.",
+      "team": "red"
     },
     {
       "event_id": "5f6e62c1-d419-482a-a7e8-e160e9d6d45e",
@@ -1086,7 +1131,8 @@
         0.1
       ],
       "confidence": 0.95,
-      "notes": "A long-distance shot results in a goal for the red team."
+      "notes": "A long-distance shot results in a goal for the red team.",
+      "team": "red"
     },
     {
       "event_id": "8905a96d-b8d2-4d1e-9a99-b1338dfd12c8",
@@ -1102,7 +1148,8 @@
         0.18
       ],
       "confidence": 0.9,
-      "notes": "A player in a blue jersey tackles a player in a red jersey."
+      "notes": "A player in a blue jersey tackles a player in a red jersey.",
+      "team": "blue"
     },
     {
       "event_id": "a9e6918a-f5b2-4d14-8745-f04b2b7a9442",
@@ -1118,7 +1165,8 @@
         0.15
       ],
       "confidence": 0.97,
-      "notes": "The player with jersey number 17 scores a goal for the red team."
+      "notes": "The player with jersey number 17 scores a goal for the red team.",
+      "team": "red"
     },
     {
       "event_id": "e6720d2d-74d7-464a-9e12-32a2c3a5160e",
@@ -1134,7 +1182,8 @@
         0.15
       ],
       "confidence": 0.88,
-      "notes": "A short pass made by a player in a red jersey in the midfield."
+      "notes": "A short pass made by a player in a red jersey in the midfield.",
+      "team": "red"
     }
   ],
   "notes": "Merged from Gemini chunk outputs"
