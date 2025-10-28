@@ -6,12 +6,11 @@ interface EventsTableProps {
   events: EventItem[];
 }
 
-// ✅ Improved time formatter
-function formatTime(seconds?: number) {
-  if (seconds == null || Number.isNaN(seconds)) return "-";
-  const mins = Math.floor(seconds / 60);
-  const secs = (seconds % 60).toFixed(1); // keep 1 decimal for precision
-  return `${String(mins).padStart(2, "0")}:${secs.padStart(4, "0")}`;
+function formatTime(s?: number) {
+  if (s == null || Number.isNaN(s)) return "-";
+  const mins = Math.floor(s / 60);
+  const secs = Math.floor(s % 60);
+  return `${String(mins).padStart(2, "0")}:${String(secs).padStart(2, "0")}`;
 }
 
 const EventsTable: React.FC<EventsTableProps> = ({ events }) => {
@@ -54,9 +53,7 @@ const EventsTable: React.FC<EventsTableProps> = ({ events }) => {
               <td className="p-3 font-semibold text-center text-blue-300">
                 {ev.player_jersey_number ?? "-"}
               </td>
-              <td className="p-3 font-semibold text-center text-blue-300">
-                {ev.player_name ?? "-"}
-              </td>
+              <td className="p-3 font-semibold text-center text-blue-300">{ev.player_name ?? "-"}</td>
               <td className="p-3 capitalize">{ev.event_type}</td>
               <td className="p-3 font-medium text-center text-yellow-300">
                 {(ev.confidence ?? 0).toFixed(2)}
