@@ -4,50 +4,58 @@
       {
         "player_jersey_number": "17",
         "player_name": null,
-        "notes": "Blue team"
+        "notes": "Blue team",
+        "team": "blue"
       },
       {
         "player_jersey_number": "11",
         "player_name": null,
-        "notes": "Blue team"
+        "notes": "Blue team",
+        "team": "blue"
       },
       {
         "player_jersey_number": "10",
         "player_name": null,
-        "notes": "Blue team"
+        "notes": "Blue team",
+        "team": "blue"
       },
       {
         "player_jersey_number": "20",
         "player_name": null,
-        "notes": "Maroon team"
+        "notes": "Maroon team",
+        "team": "red"
       },
       {
         "player_jersey_number": "8",
         "player_name": null,
-        "notes": "Team in maroon"
+        "notes": "Team in maroon",
+        "team": "red"
       },
       {
         "player_jersey_number": "2",
         "player_name": null,
-        "notes": "Team in maroon"
+        "notes": "Team in maroon",
+        "team": "red"
       },
       {
         "player_jersey_number": "6",
         "player_name": null,
-        "notes": "Team in blue"
+        "notes": "Team in blue",
+        "team": "blue"
       },
       {
         "player_jersey_number": "11",
         "player_name": null,
-        "notes": "Team in maroon"
+        "notes": "Team in maroon",
+        "team": "blue"
       },
       {
         "jersey_number": "4",
-        "team": "maroon"
+        "team": "red"
       },
       {
         "jersey_number": "11",
-        "team": "maroon"
+        "team": "blue"
       },
       {
         "jersey_number": "9",
@@ -67,22 +75,22 @@
       },
       {
         "player_jersey_number": "9",
-        "team": "Red",
+        "team": "blue",
         "notes": "Scored two goals."
       },
       {
         "player_jersey_number": "19",
-        "team": "Red",
+        "team": "red",
         "notes": "Scored a long-distance goal."
       },
       {
         "player_jersey_number": "17",
-        "team": "Red",
+        "team": "blue",
         "notes": "Scored a goal."
       },
       {
         "player_jersey_number": "8",
-        "team": "Red",
+        "team": "red",
         "notes": ""
       },
       {
@@ -92,21 +100,23 @@
       },
       {
         "player_jersey_number": "12",
-        "team": "Blue",
+        "team": "blue",
         "notes": ""
       },
       {
         "player_jersey_number": "17",
-        "team": "Blue",
+        "team": "blue",
         "notes": ""
       },
       {
         "player_name": null,
-        "player_jersey_number": "11"
+        "player_jersey_number": "11",
+        "team": "blue"
       },
       {
         "player_name": null,
-        "player_jersey_number": "4"
+        "player_jersey_number": "4",
+        "team": "red"
       },
       {
         "player_name": null,
@@ -114,7 +124,8 @@
       },
       {
         "player_name": null,
-        "player_jersey_number": "5"
+        "player_jersey_number": "5",
+        "team": "red"
       },
       {
         "player_name": null,
@@ -122,11 +133,13 @@
       },
       {
         "player_name": null,
-        "player_jersey_number": "17"
+        "player_jersey_number": "17",
+        "team": "blue"
       },
       {
         "player_name": null,
-        "player_jersey_number": "13"
+        "player_jersey_number": "13",
+        "team": "red"
       }
     ]
   },
