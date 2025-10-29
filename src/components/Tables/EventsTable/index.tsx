@@ -17,7 +17,7 @@ const EventsTable: React.FC<EventsTableProps> = ({ events }) => {
   if (!events?.length)
     return (
       <div className="p-6 text-center text-gray-400">
-        No events detected yet.
+        No events found for this filter.
       </div>
     );
 
@@ -53,7 +53,9 @@ const EventsTable: React.FC<EventsTableProps> = ({ events }) => {
               <td className="p-3 font-semibold text-center text-blue-300">
                 {ev.player_jersey_number ?? "-"}
               </td>
-              <td className="p-3 font-semibold text-center text-blue-300">{ev.player_name ?? "-"}</td>
+              <td className="p-3 font-semibold text-center text-blue-300">
+                {ev.player_name ?? "-"}
+              </td>
               <td className="p-3 capitalize">{ev.event_type}</td>
               <td className="p-3 font-medium text-center text-yellow-300">
                 {(ev.confidence ?? 0).toFixed(2)}

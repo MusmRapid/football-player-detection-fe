@@ -1,10 +1,11 @@
-import React, { useState, useCallback } from "react";
+import React, { useState, useCallback, useMemo } from "react";
 import { motion } from "framer-motion";
 import type { AnalyticsData, EventItem } from "./types/analytics";
 import EventsTable from "./components/Tables/EventsTable";
 import UploadSection from "./components/HomeComp/UploadSection";
 import SummaryAndCounts from "./components/HomeComp/SummaryAndCounts";
 import Loader from "./components/Loader";
+import { ChevronDown } from "lucide-react";
 
 const App: React.FC = () => {
   const [data, setData] = useState<AnalyticsData | null>(null);
@@ -13,6 +14,7 @@ const App: React.FC = () => {
   const [progress, setProgress] = useState(0);
   const [events, setEvents] = useState<EventItem[]>([]);
   const [error, setError] = useState<string | null>(null);
+  const [filter, setFilter] = useState<string>("all");
 
   // --- Simulated upload ---
   const handleFileUpload = useCallback(async () => {
@@ -71,45 +73,44 @@ const App: React.FC = () => {
         p.player_jersey_number || p.jersey_number || p.player_name || null;
       const team = p.team || inferTeamFromNotes(p.notes || "");
       if (jersey && team) {
-        jerseyToTeam.set(jersey.trim(), team.toLowerCase());
+        const normalized = team.toLowerCase() === "maroon" ? "red" : team.toLowerCase();
+        jerseyToTeam.set(jersey.trim(), normalized);
       }
     });
   }
 
   // --- Normalize Events ---
-  const processedEvents = events.map((ev) => {
-    const jersey = ev.player_jersey_number ?? ev.player_name ?? null;
-    let team: string | null = null;
+  const processedEvents = useMemo(() => {
+    return events.map((ev) => {
+      const jersey = ev.player_jersey_number ?? ev.player_name ?? null;
+      let team: string | null = null;
 
-    // Priority: ev.team > jerseyToTeam > infer from notes
-    if (ev.team) {
-      team = ev.team.toLowerCase();
-    } else if (jersey && jerseyToTeam.has(jersey)) {
-      team = jerseyToTeam.get(jersey)!;
-    } else {
-      team = inferTeamFromNotes(ev.notes);
-    }
+      if (ev.team) {
+        team = ev.team.toLowerCase() === "maroon" ? "red" : ev.team.toLowerCase();
+      } else if (jersey && jerseyToTeam.has(jersey)) {
+        team = jerseyToTeam.get(jersey)!;
+      } else {
+        team = inferTeamFromNotes(ev.notes);
+      }
 
-    return { ...ev, team };
-  });
+      return { ...ev, team };
+    });
+  }, [events]);
 
-  // --- Group events by type for each team ---
-  const groupByType = (team: string) => {
-    const filtered = processedEvents.filter((e) => e.team === team);
-    return {
-      goals: filtered.filter((e) => e.event_type === "goal"),
-      passes: filtered.filter((e) => e.event_type === "pass"),
-      tackles: filtered.filter((e) => e.event_type === "tackle"),
-    };
+  // --- Filter by team ---
+  const redTeam = processedEvents.filter((e) => e.team === "red");
+  const blueTeam = processedEvents.filter((e) => e.team === "blue");
+
+  // --- Filter by event type ---
+  const filterEvents = (teamEvents: EventItem[]) => {
+    if (filter === "all") return teamEvents;
+    return teamEvents.filter(
+      (e) => e.event_type.toLowerCase() === filter.toLowerCase()
+    );
   };
 
-  const redTeam = groupByType("red");
-  const blueTeam = groupByType("blue");
-  const undetermined = {
-    goals: processedEvents.filter((e) => !e.team && e.event_type === "goal"),
-    passes: processedEvents.filter((e) => !e.team && e.event_type === "pass"),
-    tackles: processedEvents.filter((e) => !e.team && e.event_type === "tackle"),
-  };
+  // --- Dropdown options ---
+  const eventTypes = ["all", "goal", "miss shot", "pass", "save", "tackle"];
 
   // --- UI ---
   return (
@@ -132,7 +133,7 @@ const App: React.FC = () => {
         />
       </div>
 
-      {/* Uploading and processing indicators */}
+      {/* Status */}
       {uploading && !data && (
         <div className="max-w-4xl mx-auto mt-8">
           <div className="p-6 text-center border border-gray-800 rounded-2xl bg-gray-900/60">
@@ -149,7 +150,6 @@ const App: React.FC = () => {
         </div>
       )}
 
-      {/* Error */}
       {error && (
         <div className="max-w-4xl mx-auto mt-6">
           <div className="p-4 text-center text-red-400 border border-red-500/40 rounded-xl bg-red-900/10">
@@ -158,7 +158,7 @@ const App: React.FC = () => {
         </div>
       )}
 
-      {/* Results */}
+      {/* Main content */}
       <main className="mx-auto space-y-8 max-w-7xl">
         {data?.summary && (
           <SummaryAndCounts events={events} summaryPayload={data.summary} />
@@ -166,71 +166,56 @@ const App: React.FC = () => {
 
         {data && (
           <>
+            <div className="flex flex-col items-center justify-end gap-4 mb-8 sm:flex-row">
+              <h3 className="text-xl font-semibold text-gray-300">
+                Filter Events
+              </h3>
+
+              <div className="relative">
+                <motion.select
+                  value={filter}
+                  onChange={(e) => setFilter(e.target.value)}
+                  whileHover={{ scale: 1.02 }}
+                  whileFocus={{ scale: 1.03 }}
+                  style={{
+                    backgroundColor: "#1e293b",
+                  }}
+                  className="px-4 py-2 pr-10 text-sm font-medium text-white border rounded-lg shadow-md appearance-none cursor-pointer bg-gradient-to-r from-indigo-700 via-blue-700 to-purple-700 focus:outline-none focus:ring-2 focus:ring-blue-400 border-blue-500/30"
+                >
+                  {eventTypes.map((type) => (
+                    <option
+                      key={type}
+                      value={type}
+                      className="text-white bg-gray-900 hover:bg-gray-800"
+                    >
+                      {type.charAt(0).toUpperCase() + type.slice(1)}
+                    </option>
+                  ))}
+                </motion.select>
+
+                {/* Dropdown icon (Lucide) */}
+                <ChevronDown
+                  className="absolute w-4 h-4 text-gray-200 -translate-y-1/2 pointer-events-none right-3 top-1/2"
+                />
+              </div>
+            </div>
+
             {/* Red vs Blue side-by-side */}
             <div className="grid grid-cols-1 gap-10 md:grid-cols-2">
-              {/* RED TEAM */}
               <section>
                 <h2 className="mb-4 text-2xl font-semibold text-red-400">
                   Red Team
                 </h2>
-                {["goals", "passes", "tackles"].map((type) => (
-                  <div
-                    key={type}
-                    className="p-4 mb-6 border border-gray-800 rounded-xl bg-gray-900/40"
-                  >
-                    <h3 className="mb-3 text-lg font-medium text-gray-300 capitalize">
-                      {type}
-                    </h3>
-                    <EventsTable events={redTeam[type as keyof typeof redTeam]} />
-                  </div>
-                ))}
+                <EventsTable events={filterEvents(redTeam)} />
               </section>
 
-              {/* BLUE TEAM */}
               <section>
                 <h2 className="mb-4 text-2xl font-semibold text-blue-400">
                   Blue Team
                 </h2>
-                {["goals", "passes", "tackles"].map((type) => (
-                  <div
-                    key={type}
-                    className="p-4 mb-6 border border-gray-800 rounded-xl bg-gray-900/40"
-                  >
-                    <h3 className="mb-3 text-lg font-medium text-gray-300 capitalize">
-                      {type}
-                    </h3>
-                    <EventsTable
-                      events={blueTeam[type as keyof typeof blueTeam]}
-                    />
-                  </div>
-                ))}
+                <EventsTable events={filterEvents(blueTeam)} />
               </section>
             </div>
-
-            {/* UNDERTMINED TEAM — vertical stacking */}
-            {Object.values(undetermined).some((arr) => arr.length > 0) && (
-              <section className="mt-12">
-                <h2 className="mb-4 text-2xl font-semibold text-yellow-400">
-                  🟡 Undetermined Team
-                </h2>
-
-                <div className="flex flex-col gap-8">
-                  {["goals", "passes", "tackles"].map((type) => (
-                    <div
-                      key={type}
-                      className="p-4 border border-gray-800 rounded-xl bg-gray-900/40"
-                    >
-                      <h3 className="mb-3 text-lg font-medium text-gray-300 capitalize">
-                        {type}
-                      </h3>
-                      <EventsTable
-                        events={undetermined[type as keyof typeof undetermined]}
-                      />
-                    </div>
-                  ))}
-                </div>
-              </section>
-            )}
           </>
         )}
       </main>
