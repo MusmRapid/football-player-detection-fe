@@ -1,8 +1,6 @@
-
-import { Trophy, ArrowUpRight, Activity } from "lucide-react";
+import { Trophy, ArrowUpRight, Activity, XCircle, Shield } from "lucide-react";
 import type { EventItem } from "../../../types/analytics";
 import SummaryCard from "../../SummaryCard";
-
 
 function SummaryAndCounts({
   events,
@@ -11,29 +9,35 @@ function SummaryAndCounts({
   events: EventItem[];
   summaryPayload: any;
 }) {
-  // aggregate counts from events (fallback when backend summary is empty)
+  // --- Aggregate counts from events (fallback when backend summary is empty) ---
   const counts = events.reduce(
     (acc, e) => {
-      if (e.event_type === "goal") acc.goals++;
-      if (e.event_type === "pass") acc.passes++;
-      if (e.event_type === "tackle") acc.tackles++;
+      const type = e.event_type?.toLowerCase();
+      if (type === "goal") acc.goals++;
+      if (type === "pass") acc.passes++;
+      if (type === "tackle") acc.tackles++;
+      if (type === "miss shot" || type === "missed shot") acc.missedShots++;
+      if (type === "save" || type === "goal save") acc.saves++;
       return acc;
     },
-    { goals: 0, passes: 0, tackles: 0 }
+    { goals: 0, passes: 0, tackles: 0, missedShots: 0, saves: 0 }
   );
 
   const totalGoals =
-    (summaryPayload?.home?.total_goals ?? summaryPayload?.away?.total_goals) ??
-    counts.goals;
+    (summaryPayload?.home?.total_goals ??
+      summaryPayload?.away?.total_goals) ?? counts.goals;
   const totalPasses =
-    (summaryPayload?.home?.total_passes ?? summaryPayload?.away?.total_passes) ??
-    counts.passes;
+    (summaryPayload?.home?.total_passes ??
+      summaryPayload?.away?.total_passes) ?? counts.passes;
   const totalTackles =
-    (summaryPayload?.home?.total_tackles ?? summaryPayload?.away?.total_tackles) ??
-    counts.tackles;
+    (summaryPayload?.home?.total_tackles ??
+      summaryPayload?.away?.total_tackles) ?? counts.tackles;
+  const totalMissedShots =
+    summaryPayload?.total_missed_shots ?? counts.missedShots;
+  const totalSaves = summaryPayload?.total_saves ?? counts.saves;
 
   return (
-    <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
+    <div className="grid grid-cols-1 gap-6 sm:grid-cols-3 lg:grid-cols-3">
       <SummaryCard
         title="Total Goals"
         value={totalGoals}
@@ -51,6 +55,18 @@ function SummaryAndCounts({
         value={totalTackles}
         accent="from-green-400/20 to-green-600/10"
         icon={<Activity className="w-6 h-6 text-green-300" />}
+      />
+      <SummaryCard
+        title="Missed Shots"
+        value={totalMissedShots}
+        accent="from-red-400/20 to-red-600/10"
+        icon={<XCircle className="w-6 h-6 text-red-400" />}
+      />
+      <SummaryCard
+        title="Saves"
+        value={totalSaves}
+        accent="from-indigo-400/20 to-indigo-600/10"
+        icon={<Shield className="w-6 h-6 text-indigo-400" />}
       />
     </div>
   );
