@@ -16,7 +16,6 @@ const App: React.FC = () => {
   const [error, setError] = useState<string | null>(null);
   const [filter, setFilter] = useState<string>("all");
 
-  // --- Simulated upload ---
   const handleFileUpload = useCallback(async () => {
     setUploading(true);
     setProcessing(false);
@@ -56,7 +55,6 @@ const App: React.FC = () => {
     }
   }, []);
 
-  // --- Helpers ---
   const inferTeamFromNotes = (note?: string): string | null => {
     if (!note) return null;
     const text = note.toLowerCase();
@@ -65,7 +63,6 @@ const App: React.FC = () => {
     return null;
   };
 
-  // Map jersey numbers → team
   const jerseyToTeam = new Map<string, string>();
   if (data?.summary?.players) {
     data.summary.players.forEach((p) => {
@@ -79,7 +76,6 @@ const App: React.FC = () => {
     });
   }
 
-  // --- Normalize Events ---
   const processedEvents = useMemo(() => {
     return events.map((ev) => {
       const jersey = ev.player_jersey_number ?? ev.player_name ?? null;
@@ -97,22 +93,64 @@ const App: React.FC = () => {
     });
   }, [events]);
 
-  // --- Filter by team ---
   const redTeam = processedEvents.filter((e) => e.team === "red");
   const blueTeam = processedEvents.filter((e) => e.team === "blue");
 
-  // --- Filter by event type ---
-  const filterEvents = (teamEvents: EventItem[]) => {
-    if (filter === "all") return teamEvents;
-    return teamEvents.filter(
-      (e) => e.event_type.toLowerCase() === filter.toLowerCase()
-    );
-  };
+const filterEvents = (teamEvents: EventItem[]) => {
+  if (filter === "all") return teamEvents;
 
-  // --- Dropdown options ---
-  const eventTypes = ["all", "goal", "miss shot", "pass", "save", "tackle"];
+  return teamEvents.filter((e) => {
+    const type = e.event_type?.toLowerCase() || "";
+    const note = e.notes?.toLowerCase() || "";
 
-  // --- UI ---
+    switch (filter) {
+      case "goal":
+        return type === "goal" && !note.includes("penalty");
+      case "pass":
+        return type === "pass";
+      case "tackle":
+        return type === "tackle";
+      case "miss shot":
+        return type === "miss shot" || type === "missed shot";
+      case "save":
+        return type === "save" || type === "goal save";
+      case "corner":
+        return type === "corner" || note.includes("corner");
+      case "freekick":
+        return type === "freekick" || note.includes("free kick");
+      case "penalty":
+        return (
+          type === "penalty" ||
+          note.includes("penalty") ||
+          (type === "goal" && note.includes("penalty")) ||
+          (type === "save" && note.includes("penalty")) ||
+          (type === "miss shot" && note.includes("penalty"))
+        );
+        //case "penalty":
+        // return (
+        //   type === "penalty" ||
+        //   (["goal", "save", "miss shot", "missed shot"].includes(type) &&
+        //     note.includes("penalty"))
+        // );
+      default:
+        return type === filter;
+    }
+  });
+};
+
+
+  const eventTypes = [
+    "all",
+    "corner",
+    "freekick",
+    "goal",
+    "miss shot",
+    "pass",
+    "penalty",
+    "save",
+    "tackle",
+  ];
+
   return (
     <div className="min-h-screen px-4 py-6 text-white bg-gradient-to-br from-slate-950 via-slate-900 to-gray-950 sm:px-6 lg:px-10">
       <motion.h1
@@ -123,7 +161,6 @@ const App: React.FC = () => {
         Football Player Analytics
       </motion.h1>
 
-      {/* Upload section */}
       <div className="mb-8">
         <UploadSection
           compact={!!data}
@@ -133,7 +170,6 @@ const App: React.FC = () => {
         />
       </div>
 
-      {/* Status */}
       {uploading && !data && (
         <div className="max-w-4xl mx-auto mt-8">
           <div className="p-6 text-center border border-gray-800 rounded-2xl bg-gray-900/60">
@@ -158,7 +194,6 @@ const App: React.FC = () => {
         </div>
       )}
 
-      {/* Main content */}
       <main className="mx-auto space-y-8 max-w-7xl">
         {data?.summary && (
           <SummaryAndCounts events={events} summaryPayload={data.summary} />
@@ -193,14 +228,12 @@ const App: React.FC = () => {
                   ))}
                 </motion.select>
 
-                {/* Dropdown icon (Lucide) */}
                 <ChevronDown
                   className="absolute w-4 h-4 text-gray-200 -translate-y-1/2 pointer-events-none right-3 top-1/2"
                 />
               </div>
             </div>
 
-            {/* Red vs Blue side-by-side */}
             <div className="grid grid-cols-1 gap-10 md:grid-cols-2">
               <section>
                 <h2 className="mb-4 text-2xl font-semibold text-red-400">

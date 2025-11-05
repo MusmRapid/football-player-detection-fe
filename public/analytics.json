@@ -6,1120 +6,1665 @@
         "team": "maroon"
       },
       {
-        "player_jersey_number": "11",
-        "team": "maroon"
-      },
-      {
-        "player_jersey_number": "9",
-        "team": "maroon"
-      },
-      {
         "player_jersey_number": "2",
         "team": "maroon"
       },
       {
-        "player_jersey_number": "10",
+        "player_jersey_number": "4",
         "team": "blue"
-      },
-      {
-        "player_jersey_number": "11",
-        "team": "blue"
-      },
-      {
-        "player_jersey_number": "15",
-        "team": "blue"
-      },
-      {
-        "jersey_number": "2",
-        "team": "maroon"
-      },
-      {
-        "jersey_number": "1",
-        "team": "maroon"
-      },
-      {
-        "jersey_number": "10",
-        "team": "blue"
-      },
-      {
-        "jersey_number": "6",
-        "team": "maroon"
-      },
-      {
-        "jersey_number": "4",
-        "team": "maroon"
-      },
-      {
-        "player_jersey_number": "3",
-        "team": "maroon"
-      },
-      {
-        "player_jersey_number": "7",
-        "team": "blue"
-      },
-      {
-        "player_jersey_number": "21",
-        "team": "blue"
-      },
-      {
-        "player_jersey_number": "7",
-        "team": "maroon"
-      },
-      {
-        "player_jersey_number": "8",
-        "team": "maroon"
-      },
-      {
-        "player_jersey_number": "9",
-        "team": "maroon"
-      },
-      {
-        "player_jersey_number": "10",
-        "team": "maroon"
-      },
-      {
-        "player_jersey_number": "11",
-        "team": "maroon"
-      },
-      {
-        "player_jersey_number": "11",
-        "team": "maroon"
-      },
-      {
-        "player_jersey_number": "5",
-        "team": "blue"
-      },
-      {
-        "player_jersey_number": "8",
-        "team": "maroon"
       },
       {
         "player_jersey_number": "17",
         "team": "blue"
+      },
+      {
+        "player_jersey_number": "1",
+        "team": "blue"
+      },
+      {
+        "player_jersey_number": "9",
+        "team": "blue"
+      },
+      {
+        "player_jersey_number": "10",
+        "team": "blue"
+      },
+      {
+        "player_jersey_number": "11",
+        "team": "blue"
+      },
+      {
+        "player_jersey_number": "5",
+        "team": "maroon"
+      },
+      {
+        "player_jersey_number": "8",
+        "team": "maroon"
+      },
+      {
+        "player_jersey_number": "11",
+        "team": "maroon"
+      },
+      {
+        "player_jersey_number": "7",
+        "team": "blue"
+      },
+      {
+        "player_jersey_number": "8",
+        "team": "blue"
+      },
+      {
+        "player_jersey_number": "6",
+        "team": "blue"
+      },
+      {
+        "player_jersey_number": "4",
+        "team": "maroon"
+      },
+      {
+        "player_jersey_number": "14",
+        "team": "maroon"
+      },
+      {
+        "player_jersey_number": "10",
+        "team": "maroon"
       }
-    ]
+    ],
+    "source_files": [
+      "uploaded_video_stream_chunk_000.json",
+      "uploaded_video_stream_chunk_001.json",
+      "uploaded_video_stream_chunk_002.json",
+      "uploaded_video_stream_chunk_003.json",
+      "uploaded_video_stream_chunk_004.json",
+      "uploaded_video_stream_chunk_005.json",
+      "uploaded_video_stream_chunk_006.json",
+      "uploaded_video_stream_chunk_007.json",
+      "uploaded_video_stream_chunk_008.json"
+    ],
+    "offset_rule": "Rule B: offset = 600 * chunk_index (000->0, 001->600, 002->1200, ...)",
+    "event_type_normalization": {
+      "penalty_goal_to_penalty": true,
+      "penalty_to_foul": true
+    }
   },
   "per_event": [
     {
-      "event_id": "1",
+      "event_id": "314f17e0-639a-4161-9c12-3f82a1e05d9c",
       "event_type": "pass",
-      "player_jersey_number": "2",
-      "player_name": "Bora David Andrei",
-      "team": "blue",
-      "start_time": 6.3,
-      "end_time": 7.1,
-      "bounding_box": [
-        0.38,
-        0.65,
-        0.04,
-        0.12
-      ],
-      "confidence": 0.9,
-      "notes": "Player passes the ball back to a teammate."
-    },
-    {
-      "event_id": "2",
-      "event_type": "tackle",
-      "player_jersey_number": "11",
+      "player_jersey_number": "20",
       "player_name": null,
       "team": "maroon",
-      "start_time": 32.7,
-      "end_time": 33.6,
+      "start_time": 420.72,
+      "end_time": 421.32,
       "bounding_box": [
-        0.55,
-        0.54,
-        0.05,
-        0.14
+        0.478,
+        0.491,
+        0.024,
+        0.081
       ],
-      "confidence": 0.85,
-      "notes": "Maroon player tackles the blue player to regain possession."
+      "confidence": 0.95,
+      "notes": "Kick-off to start the match.",
+      "_source_file": "uploaded_video_stream_chunk_000.json",
+      "_applied_offset_seconds": 0
     },
     {
-      "event_id": "1",
+      "event_id": "c92e8a15-d5e8-4b7f-8d9b-1f9c34e8d2e1",
+      "event_type": "tackle",
+      "player_jersey_number": "17",
+      "player_name": null,
+      "team": "blue",
+      "start_time": 427.36,
+      "end_time": 428.16,
+      "bounding_box": [
+        0.401,
+        0.548,
+        0.052,
+        0.111
+      ],
+      "confidence": 0.8,
+      "notes": "Tackle to regain possession near the center line.",
+      "_source_file": "uploaded_video_stream_chunk_000.json",
+      "_applied_offset_seconds": 0
+    },
+    {
+      "event_id": "a87b1c34-f2a1-4e9b-9c2d-8e45a2b1f8d3",
+      "event_type": "tackle",
+      "player_jersey_number": "2",
+      "player_name": null,
+      "team": "maroon",
+      "start_time": 461.83,
+      "end_time": 462.53,
+      "bounding_box": [
+        0.198,
+        0.495,
+        0.041,
+        0.118
+      ],
+      "confidence": 0.88,
+      "notes": "A sliding tackle to prevent a clear shot.",
+      "_source_file": "uploaded_video_stream_chunk_000.json",
+      "_applied_offset_seconds": 0
+    },
+    {
+      "event_id": "b5d6c7e8-a1b9-4c3d-8f2a-9e1d3c5b7a1e",
+      "event_type": "miss shot",
+      "player_jersey_number": null,
+      "player_name": null,
+      "team": "blue",
+      "start_time": 462.53,
+      "end_time": 463.13,
+      "bounding_box": [
+        0.189,
+        0.511,
+        0.039,
+        0.115
+      ],
+      "confidence": 0.92,
+      "notes": "Shot on target immediately after a tackle, saved by the keeper.",
+      "_source_file": "uploaded_video_stream_chunk_000.json",
+      "_applied_offset_seconds": 0
+    },
+    {
+      "event_id": "d1e2f3a4-b5c6-4d7e-8f9a-1b2c3d4e5f6a",
       "event_type": "save",
       "player_jersey_number": null,
       "player_name": null,
-      "team": "blue",
-      "start_time": 41.5,
-      "end_time": 42.5,
-      "bounding_box": [
-        0.156,
-        0.463,
-        0.042,
-        0.148
-      ],
-      "confidence": 0.9,
-      "notes": "Goalkeeper saves a shot from a maroon player."
-    },
-    {
-      "event_id": "1",
-      "event_type": "miss shot",
-      "player_jersey_number": "9",
-      "player_name": null,
       "team": "maroon",
-      "start_time": 51.5,
-      "end_time": 53.5,
+      "start_time": 462.83,
+      "end_time": 463.83,
       "bounding_box": [
-        0.49,
-        0.58,
-        0.05,
-        0.15
+        0.101,
+        0.443,
+        0.043,
+        0.142
       ],
-      "confidence": 0.9,
-      "notes": "Player shoots from outside the box, ball goes wide left."
+      "confidence": 0.96,
+      "notes": "Goalkeeper saves a shot from close range.",
+      "_source_file": "uploaded_video_stream_chunk_000.json",
+      "_applied_offset_seconds": 0
     },
     {
-      "event_id": "3",
-      "event_type": "miss shot",
-      "player_jersey_number": null,
-      "player_name": null,
-      "team": "maroon",
-      "start_time": 53.6,
-      "end_time": 54.5,
-      "bounding_box": [
-        0.59,
-        0.59,
-        0.05,
-        0.13
-      ],
-      "confidence": 0.9,
-      "notes": "A long-range shot by a maroon player goes wide of the goal."
-    },
-    {
-      "event_id": "2",
+      "event_id": "f7a8b9c0-d1e2-4f3a-8b5c-6d7e8f9a1b2c",
       "event_type": "tackle",
-      "player_jersey_number": null,
+      "player_jersey_number": "4",
       "player_name": null,
-      "team": "maroon",
-      "start_time": 58.5,
-      "end_time": 59.8,
+      "team": "blue",
+      "start_time": 545.88,
+      "end_time": 546.58,
       "bounding_box": [
-        0.455,
-        0.59,
-        0.05,
-        0.12
+        0.264,
+        0.672,
+        0.048,
+        0.131
       ],
-      "confidence": 0.8,
-      "notes": "Maroon player tackles a blue player in the midfield."
+      "confidence": 0.91,
+      "notes": "Tackle that leads to a counter-attack and goal.",
+      "_source_file": "uploaded_video_stream_chunk_000.json",
+      "_applied_offset_seconds": 0
     },
     {
-      "event_id": "1",
-      "event_type": "goal",
-      "player_jersey_number": "3",
+      "event_id": "e3d4c5b6-a7f8-4b9c-8d1e-2f3a4b5c6d7e",
+      "event_type": "pass",
+      "player_jersey_number": "4",
       "player_name": null,
-      "team": "maroon",
-      "start_time": 81.78,
-      "end_time": 82.9,
+      "team": "blue",
+      "start_time": 546.15,
+      "end_time": 546.75,
       "bounding_box": [
-        0.458,
-        0.694,
+        0.221,
+        0.601,
         0.042,
+        0.125
+      ],
+      "confidence": 0.94,
+      "notes": "Assist pass leading to a goal.",
+      "_source_file": "uploaded_video_stream_chunk_000.json",
+      "_applied_offset_seconds": 0
+    },
+    {
+      "event_id": "9a8b7c6d-5e4f-4a3b-8c2d-1e9f8a7b6c5d",
+      "event_type": "penalty",
+      "player_jersey_number": null,
+      "player_name": null,
+      "team": "blue",
+      "start_time": 547.58,
+      "end_time": 548.88,
+      "bounding_box": [
+        0.183,
+        0.485,
+        0.038,
         0.12
       ],
       "confidence": 0.98,
-      "notes": "A player from the maroon team scores a long-range goal after a free kick rebound."
-    },
-    {
-      "event_id": "4",
-      "event_type": "tackle",
-      "player_jersey_number": null,
-      "player_name": null,
-      "team": "maroon",
-      "start_time": 96.4,
-      "end_time": 97.3,
-      "bounding_box": [
-        0.5,
-        0.5,
-        0.06,
-        0.15
-      ],
-      "confidence": 0.8,
-      "notes": "A foul is committed by a maroon player during a tackle."
+      "notes": "Goal scored from just outside the penalty area.",
+      "_source_file": "uploaded_video_stream_chunk_000.json",
+      "_applied_offset_seconds": 0
     },
     {
       "event_id": "1",
-      "event_type": "goal",
-      "player_jersey_number": "2",
+      "event_type": "penalty",
+      "player_jersey_number": "11",
       "player_name": null,
       "team": "maroon",
-      "start_time": 96.5,
-      "end_time": 98.0,
+      "start_time": 696.5,
+      "end_time": 698.0,
       "bounding_box": [
-        0.77,
+        0.78,
         0.45,
         0.05,
         0.15
       ],
       "confidence": 0.95,
-      "notes": "Player #2 scores with a low shot after receiving a pass from the right side of the penalty area."
+      "notes": "Player shoots from the right side of the penalty area, scoring past the diving goalkeeper.",
+      "_source_file": "uploaded_video_stream_chunk_001.json",
+      "_applied_offset_seconds": 600
     },
     {
-      "event_id": "84c8d9e2-36c6-43f1-b1e9-74d32a93b48d",
-      "event_type": "tackle",
-      "player_jersey_number": null,
-      "player_name": null,
-      "team": "maroon",
-      "start_time": 113.81,
-      "end_time": 115.11,
-      "bounding_box": [
-        0.491,
-        0.435,
-        0.045,
-        0.117
-      ],
-      "confidence": 0.8,
-      "notes": "Player tackles and wins the ball, initiating an attack."
-    },
-    {
-      "event_id": "d1e7c9f8-77b3-466d-b8d2-45e0f7f3e8f9",
-      "event_type": "miss shot",
+      "event_id": "2",
+      "event_type": "pass",
       "player_jersey_number": "11",
       "player_name": null,
-      "team": "maroon",
-      "start_time": 116.52,
-      "end_time": 118.82,
+      "team": "light blue",
+      "start_time": 729.8,
+      "end_time": 730.5,
       "bounding_box": [
-        0.558,
-        0.449,
-        0.052,
-        0.141
+        0.51,
+        0.52,
+        0.04,
+        0.12
       ],
       "confidence": 0.9,
-      "notes": "Shot is blocked by a sliding defender and goes wide of the goal."
-    },
-    {
-      "event_id": "2",
-      "event_type": "save",
-      "player_jersey_number": null,
-      "player_name": null,
-      "team": "blue",
-      "start_time": 119.0,
-      "end_time": 121.0,
-      "bounding_box": [
-        0.73,
-        0.53,
-        0.08,
-        0.18
-      ],
-      "confidence": 0.95,
-      "notes": "Goalkeeper makes a diving save to his left on a shot from the maroon team."
-    },
-    {
-      "event_id": "90e1f74a-2d3b-48a5-83c7-316a50e183b1",
-      "event_type": "goal",
-      "player_jersey_number": "8",
-      "player_name": null,
-      "team": "maroon",
-      "start_time": 148.8,
-      "end_time": 150.5,
-      "bounding_box": [
-        0.354,
-        0.75,
-        0.041,
-        0.101
-      ],
-      "confidence": 0.95,
-      "notes": "Direct free-kick goal."
-    },
-    {
-      "event_id": "a9b2d3c4-e8f7-41a2-b3c4-5d6e7f8a9b0c",
-      "event_type": "tackle",
-      "player_jersey_number": null,
-      "player_name": null,
-      "team": "blue",
-      "start_time": 155.02,
-      "end_time": 155.92,
-      "bounding_box": [
-        0.395,
-        0.583,
-        0.056,
-        0.138
-      ],
-      "confidence": 0.7,
-      "notes": "Blue player tackles the maroon player near the sideline."
-    },
-    {
-      "event_id": "2",
-      "event_type": "tackle",
-      "player_jersey_number": "10",
-      "player_name": "Muresan Alexandru Ovidiu",
-      "team": "blue",
-      "start_time": 165.0,
-      "end_time": 166.5,
-      "bounding_box": [
-        0.26,
-        0.47,
-        0.05,
-        0.14
-      ],
-      "confidence": 0.8,
-      "notes": "A sliding tackle from behind, resulting in a foul."
+      "notes": "Kick-off after the goal.",
+      "_source_file": "uploaded_video_stream_chunk_001.json",
+      "_applied_offset_seconds": 600
     },
     {
       "event_id": "3",
-      "event_type": "miss shot",
-      "player_jersey_number": null,
+      "event_type": "tackle",
+      "player_jersey_number": "17",
       "player_name": null,
-      "team": "blue",
-      "start_time": 167.8,
-      "end_time": 169.2,
+      "team": "light blue",
+      "start_time": 765.5,
+      "end_time": 766.5,
       "bounding_box": [
-        0.391,
-        0.37,
-        0.031,
-        0.12
+        0.26,
+        0.53,
+        0.05,
+        0.13
       ],
       "confidence": 0.85,
-      "notes": "Blue player shoots from outside the box, shot is blocked and goes high."
+      "notes": "A slide tackle inside the penalty box. The attacking team claimed a penalty.",
+      "_source_file": "uploaded_video_stream_chunk_001.json",
+      "_applied_offset_seconds": 600
     },
     {
-      "event_id": "1",
+      "event_id": "4",
       "event_type": "miss shot",
-      "player_jersey_number": "7",
-      "player_name": "Chis David",
-      "team": "blue",
-      "start_time": 179.5,
-      "end_time": 180.5,
+      "player_jersey_number": "2",
+      "player_name": null,
+      "team": "maroon",
+      "start_time": 881.8,
+      "end_time": 882.5,
       "bounding_box": [
-        0.62,
-        0.46,
-        0.05,
-        0.19
+        0.82,
+        0.44,
+        0.04,
+        0.12
       ],
       "confidence": 0.9,
-      "notes": ""
+      "notes": "Header from a freekick goes over the crossbar.",
+      "_source_file": "uploaded_video_stream_chunk_001.json",
+      "_applied_offset_seconds": 600
     },
     {
       "event_id": "5",
-      "event_type": "pass",
-      "player_jersey_number": "14",
-      "player_name": null,
-      "team": "maroon",
-      "start_time": 192.8,
-      "end_time": 193.9,
-      "bounding_box": [
-        0.66,
-        0.56,
-        0.04,
-        0.11
-      ],
-      "confidence": 0.95,
-      "notes": "A long forward pass from the maroon team."
-    },
-    {
-      "event_id": "3",
-      "event_type": "miss shot",
-      "player_jersey_number": "9",
-      "player_name": null,
-      "team": "maroon",
-      "start_time": 201.5,
-      "end_time": 203.5,
-      "bounding_box": [
-        0.3,
-        0.63,
-        0.04,
-        0.13
-      ],
-      "confidence": 0.85,
-      "notes": "Free kick taken by maroon player goes over the crossbar."
-    },
-    {
-      "event_id": "f5d1e8c7-98b6-45a9-b8d2-1c2d3e4f5a6b",
-      "event_type": "pass",
-      "player_jersey_number": "5",
-      "player_name": "Kovacs Lorand Krisztian",
-      "team": "blue",
-      "start_time": 206.51,
-      "end_time": 207.51,
-      "bounding_box": [
-        0.669,
-        0.542,
-        0.047,
-        0.118
-      ],
-      "confidence": 0.85,
-      "notes": "Player passes the ball upfield."
-    },
-    {
-      "event_id": "2",
       "event_type": "save",
       "player_jersey_number": null,
       "player_name": null,
       "team": "maroon",
-      "start_time": 213.0,
-      "end_time": 214.0,
+      "start_time": 914.0,
+      "end_time": 915.5,
       "bounding_box": [
-        0.1,
-        0.46,
-        0.08,
-        0.23
+        0.05,
+        0.42,
+        0.07,
+        0.2
       ],
-      "confidence": 0.95,
-      "notes": "Save from a free kick."
+      "confidence": 0.92,
+      "notes": "Goalkeeper catches a long-range shot.",
+      "_source_file": "uploaded_video_stream_chunk_001.json",
+      "_applied_offset_seconds": 600
     },
     {
       "event_id": "6",
-      "event_type": "save",
-      "player_jersey_number": null,
+      "event_type": "tackle",
+      "player_jersey_number": "20",
       "player_name": null,
-      "team": "maroon",
-      "start_time": 215.7,
-      "end_time": 216.8,
+      "team": "light blue",
+      "start_time": 1172.0,
+      "end_time": 1172.8,
       "bounding_box": [
-        0.85,
-        0.45,
-        0.06,
-        0.15
+        0.72,
+        0.65,
+        0.05,
+        0.14
       ],
-      "confidence": 0.98,
-      "notes": "The maroon goalkeeper makes a save from a shot by a blue player."
-    },
-    {
-      "event_id": "c3b4d5e6-f7a8-49b0-c1d2-e3f4a5b6c7d8",
-      "event_type": "save",
-      "player_jersey_number": null,
-      "player_name": null,
-      "team": "blue",
-      "start_time": 238.4,
-      "end_time": 239.9,
-      "bounding_box": [
-        0.73,
-        0.457,
-        0.041,
-        0.13
-      ],
-      "confidence": 0.95,
-      "notes": "Goalkeeper catches a long-range shot from the maroon team."
+      "confidence": 0.88,
+      "notes": "Tackle to dispossess the attacker near the sideline.",
+      "_source_file": "uploaded_video_stream_chunk_001.json",
+      "_applied_offset_seconds": 600
     },
     {
       "event_id": "7",
-      "event_type": "tackle",
-      "player_jersey_number": "9",
-      "player_name": "Butcure Darius Antonio",
-      "team": "blue",
-      "start_time": 264.2,
-      "end_time": 265.1,
+      "event_type": "miss shot",
+      "player_jersey_number": "11",
+      "player_name": null,
+      "team": "maroon",
+      "start_time": 1175.5,
+      "end_time": 1176.5,
       "bounding_box": [
-        0.44,
+        0.81,
+        0.45,
+        0.05,
+        0.15
+      ],
+      "confidence": 0.8,
+      "notes": "Long range shot is blocked by a defender. Referee signals offside.",
+      "_source_file": "uploaded_video_stream_chunk_001.json",
+      "_applied_offset_seconds": 600
+    },
+    {
+      "event_id": "8432b0a1-4d39-4f7f-8558-8687a4a9c6c4",
+      "event_type": "goal",
+      "player_jersey_number": "9",
+      "player_name": null,
+      "team": "maroon",
+      "start_time": 1308.8,
+      "end_time": 1310.5,
+      "bounding_box": [
+        0.465,
+        0.59,
+        0.045,
+        0.12
+      ],
+      "confidence": 0.98,
+      "notes": "Scored directly from a long-range free kick. The goalkeeper misjudged the bounce.",
+      "_source_file": "uploaded_video_stream_chunk_002.json",
+      "_applied_offset_seconds": 1200
+    },
+    {
+      "event_id": "e2f1d234-9c56-4b8a-8d1e-3f7c9e1a2b3d",
+      "event_type": "miss shot",
+      "player_jersey_number": "11",
+      "player_name": null,
+      "team": "maroon",
+      "start_time": 1379.3,
+      "end_time": 1380.1,
+      "bounding_box": [
+        0.66,
         0.56,
-        0.06,
+        0.05,
         0.14
       ],
       "confidence": 0.8,
-      "notes": "A blue player makes a successful tackle."
+      "notes": "Long shot from the right side, goes wide of the goal.",
+      "_source_file": "uploaded_video_stream_chunk_002.json",
+      "_applied_offset_seconds": 1200
     },
     {
-      "event_id": "4",
+      "event_id": "c7a8b9f0-1d2e-4c5b-8f9a-1e2d3c4b5a6b",
+      "event_type": "miss shot",
+      "player_jersey_number": "11",
+      "player_name": null,
+      "team": "maroon",
+      "start_time": 1431.0,
+      "end_time": 1431.8,
+      "bounding_box": [
+        0.73,
+        0.45,
+        0.05,
+        0.15
+      ],
+      "confidence": 0.85,
+      "notes": "Shot from a distance goes over the crossbar.",
+      "_source_file": "uploaded_video_stream_chunk_002.json",
+      "_applied_offset_seconds": 1200
+    },
+    {
+      "event_id": "3a4b5c6d-7e8f-4a1b-9c8d-6e7f8a9b0c1d",
       "event_type": "tackle",
       "player_jersey_number": null,
       "player_name": null,
       "team": "maroon",
-      "start_time": 275.1,
-      "end_time": 276.1,
+      "start_time": 1466.3,
+      "end_time": 1467.3,
       "bounding_box": [
-        0.651,
-        0.509,
-        0.036,
-        0.13
+        0.23,
+        0.49,
+        0.08,
+        0.18
+      ],
+      "confidence": 0.9,
+      "notes": "Tackle inside the penalty area, resulting in a corner.",
+      "_source_file": "uploaded_video_stream_chunk_002.json",
+      "_applied_offset_seconds": 1200
+    },
+    {
+      "event_id": "9d0e1f2a-3b4c-4d5e-8f9a-1e2d3c4b5a6c",
+      "event_type": "goal",
+      "player_jersey_number": "11",
+      "player_name": null,
+      "team": "blue",
+      "start_time": 1608.0,
+      "end_time": 1609.5,
+      "bounding_box": [
+        0.77,
+        0.55,
+        0.06,
+        0.16
+      ],
+      "confidence": 0.98,
+      "notes": "Scored from a close-range shot after a cross from the right wing.",
+      "_source_file": "uploaded_video_stream_chunk_002.json",
+      "_applied_offset_seconds": 1200
+    },
+    {
+      "event_id": "f5e6d7c8-9b0a-4c1d-8e9f-2a3b4c5d6e7f",
+      "event_type": "save",
+      "player_jersey_number": null,
+      "player_name": null,
+      "team": "maroon",
+      "start_time": 1733.8,
+      "end_time": 1734.8,
+      "bounding_box": [
+        0.11,
+        0.45,
+        0.05,
+        0.15
+      ],
+      "confidence": 0.9,
+      "notes": "Goalkeeper saves a shot from a blue player inside the box.",
+      "_source_file": "uploaded_video_stream_chunk_002.json",
+      "_applied_offset_seconds": 1200
+    },
+    {
+      "event_id": "001",
+      "event_type": "freekick",
+      "player_jersey_number": "20",
+      "player_name": null,
+      "team": "maroon",
+      "start_time": 1825.8,
+      "end_time": 1827.2,
+      "bounding_box": [
+        0.464,
+        0.655,
+        0.038,
+        0.117
+      ],
+      "confidence": 0.9,
+      "notes": "",
+      "_source_file": "uploaded_video_stream_chunk_003.json",
+      "_applied_offset_seconds": 1800
+    },
+    {
+      "event_id": "002",
+      "event_type": "save",
+      "player_jersey_number": null,
+      "player_name": null,
+      "team": "blue",
+      "start_time": 1841.0,
+      "end_time": 1842.5,
+      "bounding_box": [
+        0.151,
+        0.448,
+        0.042,
+        0.142
+      ],
+      "confidence": 0.95,
+      "notes": "Goalkeeper saves a close-range shot.",
+      "_source_file": "uploaded_video_stream_chunk_003.json",
+      "_applied_offset_seconds": 1800
+    },
+    {
+      "event_id": "003",
+      "event_type": "tackle",
+      "player_jersey_number": "11",
+      "player_name": null,
+      "team": "maroon",
+      "start_time": 1857.5,
+      "end_time": 1859.1,
+      "bounding_box": [
+        0.448,
+        0.563,
+        0.045,
+        0.119
+      ],
+      "confidence": 0.85,
+      "notes": "",
+      "_source_file": "uploaded_video_stream_chunk_003.json",
+      "_applied_offset_seconds": 1800
+    },
+    {
+      "event_id": "1b2c3d4e-5f6a-4b7c-8d9e-1a2b3c4d5e6f",
+      "event_type": "goal",
+      "player_jersey_number": "11",
+      "player_name": null,
+      "team": "blue",
+      "start_time": 1888.0,
+      "end_time": 1889.5,
+      "bounding_box": [
+        0.78,
+        0.56,
+        0.05,
+        0.15
+      ],
+      "confidence": 0.98,
+      "notes": "Blue player shoots from the right side of the penalty area, scoring in the far corner.",
+      "_source_file": "uploaded_video_stream_chunk_002.json",
+      "_applied_offset_seconds": 1200
+    },
+    {
+      "event_id": "7d8e9f0a-1b2c-4d3e-8f9a-1e2d3c4b5a6d",
+      "event_type": "save",
+      "player_jersey_number": null,
+      "player_name": null,
+      "team": "blue",
+      "start_time": 1941.5,
+      "end_time": 1942.5,
+      "bounding_box": [
+        0.12,
+        0.45,
+        0.06,
+        0.17
+      ],
+      "confidence": 0.9,
+      "notes": "Goalkeeper makes a save from a shot inside the box during a scramble.",
+      "_source_file": "uploaded_video_stream_chunk_002.json",
+      "_applied_offset_seconds": 1200
+    },
+    {
+      "event_id": "004",
+      "event_type": "miss shot",
+      "player_jersey_number": "11",
+      "player_name": null,
+      "team": "blue",
+      "start_time": 1967.5,
+      "end_time": 1969.2,
+      "bounding_box": [
+        0.26,
+        0.481,
+        0.052,
+        0.138
+      ],
+      "confidence": 0.92,
+      "notes": "",
+      "_source_file": "uploaded_video_stream_chunk_003.json",
+      "_applied_offset_seconds": 1800
+    },
+    {
+      "event_id": "c3b4a5d6-e7f8-4a9b-8c7d-6e5f4a3b2c1d",
+      "event_type": "tackle",
+      "player_jersey_number": "6",
+      "player_name": null,
+      "team": "maroon",
+      "start_time": 2045.8,
+      "end_time": 2046.8,
+      "bounding_box": [
+        0.22,
+        0.46,
+        0.06,
+        0.15
+      ],
+      "confidence": 0.95,
+      "notes": "Clean sliding tackle to stop an attacking run.",
+      "_source_file": "uploaded_video_stream_chunk_002.json",
+      "_applied_offset_seconds": 1200
+    },
+    {
+      "event_id": "e9f0a1b2-c3d4-4e5f-8a9b-7d6e5f4a3b2c",
+      "event_type": "save",
+      "player_jersey_number": null,
+      "player_name": null,
+      "team": "maroon",
+      "start_time": 2066.5,
+      "end_time": 2067.5,
+      "bounding_box": [
+        0.86,
+        0.44,
+        0.06,
+        0.16
+      ],
+      "confidence": 0.9,
+      "notes": "Goalkeeper comes out to block a shot from a blue attacker.",
+      "_source_file": "uploaded_video_stream_chunk_002.json",
+      "_applied_offset_seconds": 1200
+    },
+    {
+      "event_id": "5a6b7c8d-9e0f-4a1b-8c2d-3e4f5a6b7c8d",
+      "event_type": "miss shot",
+      "player_jersey_number": "11",
+      "player_name": null,
+      "team": "maroon",
+      "start_time": 2100.2,
+      "end_time": 2101.2,
+      "bounding_box": [
+        0.58,
+        0.52,
+        0.05,
+        0.16
       ],
       "confidence": 0.8,
-      "notes": "Maroon player successfully tackles a blue player."
+      "notes": "Long-range shot goes well over the bar.",
+      "_source_file": "uploaded_video_stream_chunk_002.json",
+      "_applied_offset_seconds": 1200
+    },
+    {
+      "event_id": "b1c2d3e4-f5a6-4b7c-8d9e-1a2b3c4d5e6f",
+      "event_type": "save",
+      "player_jersey_number": null,
+      "player_name": null,
+      "team": "maroon",
+      "start_time": 2187.5,
+      "end_time": 2188.5,
+      "bounding_box": [
+        0.87,
+        0.46,
+        0.06,
+        0.17
+      ],
+      "confidence": 0.95,
+      "notes": "Maroon goalkeeper makes a diving save to his left.",
+      "_source_file": "uploaded_video_stream_chunk_002.json",
+      "_applied_offset_seconds": 1200
+    },
+    {
+      "event_id": "005",
+      "event_type": "goal",
+      "player_jersey_number": "10",
+      "player_name": null,
+      "team": "maroon",
+      "start_time": 2234.0,
+      "end_time": 2235.5,
+      "bounding_box": [
+        0.771,
+        0.48,
+        0.04,
+        0.14
+      ],
+      "confidence": 0.99,
+      "notes": "",
+      "_source_file": "uploaded_video_stream_chunk_003.json",
+      "_applied_offset_seconds": 1800
+    },
+    {
+      "event_id": "006",
+      "event_type": "goal",
+      "player_jersey_number": "20",
+      "player_name": null,
+      "team": "maroon",
+      "start_time": 2235.8,
+      "end_time": 2238.0,
+      "bounding_box": [
+        0.81,
+        0.55,
+        0.05,
+        0.15
+      ],
+      "confidence": 0.98,
+      "notes": "Header from a free kick.",
+      "_source_file": "uploaded_video_stream_chunk_003.json",
+      "_applied_offset_seconds": 1800
+    },
+    {
+      "event_id": "1",
+      "event_type": "freekick",
+      "player_jersey_number": null,
+      "player_name": null,
+      "team": "blue",
+      "start_time": 2473.0,
+      "end_time": 2474.0,
+      "bounding_box": [
+        0.485,
+        0.573,
+        0.046,
+        0.139
+      ],
+      "confidence": 0.8,
+      "notes": "A blue team player takes a free kick.",
+      "_source_file": "uploaded_video_stream_chunk_004.json",
+      "_applied_offset_seconds": 2400
+    },
+    {
+      "event_id": "2",
+      "event_type": "penalty",
+      "player_jersey_number": "3",
+      "player_name": null,
+      "team": "blue",
+      "start_time": 2481.67,
+      "end_time": 2483.67,
+      "bounding_box": [
+        0.339,
+        0.603,
+        0.05,
+        0.14
+      ],
+      "confidence": 0.95,
+      "notes": "Player #3 scores a goal from outside the penalty box.",
+      "_source_file": "uploaded_video_stream_chunk_004.json",
+      "_applied_offset_seconds": 2400
+    },
+    {
+      "event_id": "007",
+      "event_type": "goal",
+      "player_jersey_number": "11",
+      "player_name": null,
+      "team": "maroon",
+      "start_time": 2505.0,
+      "end_time": 2507.5,
+      "bounding_box": [
+        0.8,
+        0.5,
+        0.05,
+        0.15
+      ],
+      "confidence": 0.99,
+      "notes": "Player dribbles around the goalkeeper to score.",
+      "_source_file": "uploaded_video_stream_chunk_003.json",
+      "_applied_offset_seconds": 1800
+    },
+    {
+      "event_id": "008",
+      "event_type": "goal",
+      "player_jersey_number": "11",
+      "player_name": null,
+      "team": "blue",
+      "start_time": 2517.0,
+      "end_time": 2519.0,
+      "bounding_box": [
+        0.44,
+        0.38,
+        0.05,
+        0.14
+      ],
+      "confidence": 0.97,
+      "notes": "Long-range shot.",
+      "_source_file": "uploaded_video_stream_chunk_003.json",
+      "_applied_offset_seconds": 1800
+    },
+    {
+      "event_id": "009",
+      "event_type": "foul",
+      "player_jersey_number": "20",
+      "player_name": null,
+      "team": "maroon",
+      "start_time": 2547.5,
+      "end_time": 2549.5,
+      "bounding_box": [
+        0.75,
+        0.51,
+        0.04,
+        0.14
+      ],
+      "confidence": 0.99,
+      "notes": "Penalty kick scored.",
+      "_source_file": "uploaded_video_stream_chunk_003.json",
+      "_applied_offset_seconds": 1800
+    },
+    {
+      "event_id": "010",
+      "event_type": "save",
+      "player_jersey_number": null,
+      "player_name": null,
+      "team": "maroon",
+      "start_time": 2637.5,
+      "end_time": 2639.0,
+      "bounding_box": [
+        0.83,
+        0.47,
+        0.05,
+        0.15
+      ],
+      "confidence": 0.95,
+      "notes": "",
+      "_source_file": "uploaded_video_stream_chunk_003.json",
+      "_applied_offset_seconds": 1800
+    },
+    {
+      "event_id": "011",
+      "event_type": "corner",
+      "player_jersey_number": "11",
+      "player_name": null,
+      "team": "blue",
+      "start_time": 2643.0,
+      "end_time": 2645.0,
+      "bounding_box": [
+        0.01,
+        0.9,
+        0.05,
+        0.1
+      ],
+      "confidence": 0.9,
+      "notes": "",
+      "_source_file": "uploaded_video_stream_chunk_003.json",
+      "_applied_offset_seconds": 1800
+    },
+    {
+      "event_id": "012",
+      "event_type": "goal",
+      "player_jersey_number": "2",
+      "player_name": null,
+      "team": "maroon",
+      "start_time": 2814.0,
+      "end_time": 2816.0,
+      "bounding_box": [
+        0.19,
+        0.51,
+        0.04,
+        0.13
+      ],
+      "confidence": 0.97,
+      "notes": "Header goal from a corner kick.",
+      "_source_file": "uploaded_video_stream_chunk_003.json",
+      "_applied_offset_seconds": 1800
+    },
+    {
+      "event_id": "1",
+      "event_type": "pass",
+      "player_jersey_number": "10",
+      "player_name": null,
+      "team": "maroon",
+      "start_time": 3088.5,
+      "end_time": 3089.5,
+      "bounding_box": [
+        0.48,
+        0.48,
+        0.03,
+        0.1
+      ],
+      "confidence": 0.85,
+      "notes": "Kick-off pass.",
+      "_source_file": "uploaded_video_stream_chunk_005.json",
+      "_applied_offset_seconds": 3000
+    },
+    {
+      "event_id": "2",
+      "event_type": "tackle",
+      "player_jersey_number": "21",
+      "player_name": null,
+      "team": "blue",
+      "start_time": 3100.0,
+      "end_time": 3100.8,
+      "bounding_box": [
+        0.55,
+        0.62,
+        0.04,
+        0.11
+      ],
+      "confidence": 0.8,
+      "notes": "Tackle in the midfield.",
+      "_source_file": "uploaded_video_stream_chunk_005.json",
+      "_applied_offset_seconds": 3000
     },
     {
       "event_id": "3",
       "event_type": "miss shot",
       "player_jersey_number": "6",
       "player_name": null,
-      "team": "maroon",
-      "start_time": 281.0,
-      "end_time": 282.5,
+      "team": "blue",
+      "start_time": 3178.5,
+      "end_time": 3179.8,
       "bounding_box": [
-        0.67,
-        0.7,
+        0.58,
+        0.35,
         0.04,
         0.12
       ],
-      "confidence": 0.85,
-      "notes": "Direct free kick from outside the penalty area goes over the crossbar."
+      "confidence": 0.9,
+      "notes": "Long range shot goes wide of the goal.",
+      "_source_file": "uploaded_video_stream_chunk_005.json",
+      "_applied_offset_seconds": 3000
     },
     {
-      "event_id": "e9f0a1b2-c3d4-45e6-f7a8-9b0c1d2e3f4a",
+      "event_id": "4",
+      "event_type": "freekick",
+      "player_jersey_number": null,
+      "player_name": null,
+      "team": "maroon",
+      "start_time": 3210.8,
+      "end_time": 3212.5,
+      "bounding_box": [
+        0.71,
+        0.55,
+        0.04,
+        0.12
+      ],
+      "confidence": 0.95,
+      "notes": "Direct free kick on goal.",
+      "_source_file": "uploaded_video_stream_chunk_005.json",
+      "_applied_offset_seconds": 3000
+    },
+    {
+      "event_id": "5",
+      "event_type": "save",
+      "player_jersey_number": "1",
+      "player_name": null,
+      "team": "blue",
+      "start_time": 3212.5,
+      "end_time": 3213.5,
+      "bounding_box": [
+        0.85,
+        0.45,
+        0.06,
+        0.15
+      ],
+      "confidence": 0.95,
+      "notes": "Goalkeeper saves a direct free kick.",
+      "_source_file": "uploaded_video_stream_chunk_005.json",
+      "_applied_offset_seconds": 3000
+    },
+    {
+      "event_id": "6",
+      "event_type": "corner",
+      "player_jersey_number": null,
+      "player_name": null,
+      "team": "maroon",
+      "start_time": 3242.0,
+      "end_time": 3243.0,
+      "bounding_box": [
+        0.95,
+        0.1,
+        0.04,
+        0.12
+      ],
+      "confidence": 0.9,
+      "notes": "",
+      "_source_file": "uploaded_video_stream_chunk_005.json",
+      "_applied_offset_seconds": 3000
+    },
+    {
+      "event_id": "013",
       "event_type": "goal",
+      "player_jersey_number": "17",
+      "player_name": null,
+      "team": "blue",
+      "start_time": 3264.0,
+      "end_time": 3266.0,
+      "bounding_box": [
+        0.2,
+        0.51,
+        0.05,
+        0.14
+      ],
+      "confidence": 0.98,
+      "notes": "",
+      "_source_file": "uploaded_video_stream_chunk_003.json",
+      "_applied_offset_seconds": 1800
+    },
+    {
+      "event_id": "014",
+      "event_type": "goal",
+      "player_jersey_number": "11",
+      "player_name": null,
+      "team": "maroon",
+      "start_time": 3338.0,
+      "end_time": 3340.0,
+      "bounding_box": [
+        0.35,
+        0.55,
+        0.04,
+        0.13
+      ],
+      "confidence": 0.97,
+      "notes": "Goal scored from a direct free kick.",
+      "_source_file": "uploaded_video_stream_chunk_003.json",
+      "_applied_offset_seconds": 1800
+    },
+    {
+      "event_id": "7",
+      "event_type": "save",
+      "player_jersey_number": null,
+      "player_name": null,
+      "team": "maroon",
+      "start_time": 3354.0,
+      "end_time": 3355.5,
+      "bounding_box": [
+        0.14,
+        0.48,
+        0.06,
+        0.15
+      ],
+      "confidence": 0.9,
+      "notes": "Goalkeeper catches the ball from a corner kick.",
+      "_source_file": "uploaded_video_stream_chunk_005.json",
+      "_applied_offset_seconds": 3000
+    },
+    {
+      "event_id": "1",
+      "event_type": "miss shot",
+      "player_jersey_number": "11",
+      "player_name": null,
+      "team": "maroon",
+      "start_time": 3676.5,
+      "end_time": 3678.0,
+      "bounding_box": [
+        0.48,
+        0.45,
+        0.05,
+        0.17
+      ],
+      "confidence": 0.8,
+      "notes": "Player shoots while being tackled, ball goes wide of the left post.",
+      "_source_file": "uploaded_video_stream_chunk_006.json",
+      "_applied_offset_seconds": 3600
+    },
+    {
+      "event_id": "2",
+      "event_type": "corner",
       "player_jersey_number": null,
       "player_name": null,
       "team": "blue",
-      "start_time": 284.08,
-      "end_time": 285.58,
+      "start_time": 3797.0,
+      "end_time": 3798.5,
       "bounding_box": [
-        0.589,
-        0.652,
-        0.076,
-        0.106
+        0.95,
+        0.9,
+        0.04,
+        0.08
       ],
-      "confidence": 1.0,
-      "notes": "Goal scored from a header after a corner kick."
+      "confidence": 0.9,
+      "notes": "Corner kick from the right side.",
+      "_source_file": "uploaded_video_stream_chunk_006.json",
+      "_applied_offset_seconds": 3600
+    },
+    {
+      "event_id": "3",
+      "event_type": "corner",
+      "player_jersey_number": null,
+      "player_name": null,
+      "team": "blue",
+      "start_time": 3881.0,
+      "end_time": 3882.5,
+      "bounding_box": [
+        0.95,
+        0.09,
+        0.04,
+        0.09
+      ],
+      "confidence": 0.9,
+      "notes": "Corner kick from the left side.",
+      "_source_file": "uploaded_video_stream_chunk_006.json",
+      "_applied_offset_seconds": 3600
+    },
+    {
+      "event_id": "4",
+      "event_type": "goal",
+      "player_jersey_number": "9",
+      "player_name": null,
+      "team": "blue",
+      "start_time": 3884.0,
+      "end_time": 3885.5,
+      "bounding_box": [
+        0.77,
+        0.35,
+        0.06,
+        0.15
+      ],
+      "confidence": 0.95,
+      "notes": "Goal scored with a header from a corner kick.",
+      "_source_file": "uploaded_video_stream_chunk_006.json",
+      "_applied_offset_seconds": 3600
+    },
+    {
+      "event_id": "5",
+      "event_type": "pass",
+      "player_jersey_number": "17",
+      "player_name": null,
+      "team": "blue",
+      "start_time": 3933.5,
+      "end_time": 3934.5,
+      "bounding_box": [
+        0.48,
+        0.5,
+        0.04,
+        0.11
+      ],
+      "confidence": 0.9,
+      "notes": "Kick-off pass to start the play after a goal.",
+      "_source_file": "uploaded_video_stream_chunk_006.json",
+      "_applied_offset_seconds": 3600
+    },
+    {
+      "event_id": "8",
+      "event_type": "goal",
+      "player_jersey_number": "8",
+      "player_name": null,
+      "team": "blue",
+      "start_time": 3979.5,
+      "end_time": 3981.0,
+      "bounding_box": [
+        0.19,
+        0.46,
+        0.05,
+        0.13
+      ],
+      "confidence": 0.98,
+      "notes": "Goal scored by the blue team.",
+      "_source_file": "uploaded_video_stream_chunk_005.json",
+      "_applied_offset_seconds": 3000
+    },
+    {
+      "event_id": "6",
+      "event_type": "tackle",
+      "player_jersey_number": "5",
+      "player_name": null,
+      "team": "maroon",
+      "start_time": 4006.0,
+      "end_time": 4007.5,
+      "bounding_box": [
+        0.45,
+        0.56,
+        0.09,
+        0.14
+      ],
+      "confidence": 0.85,
+      "notes": "Sliding tackle resulting in a foul.",
+      "_source_file": "uploaded_video_stream_chunk_006.json",
+      "_applied_offset_seconds": 3600
+    },
+    {
+      "event_id": "7",
+      "event_type": "freekick",
+      "player_jersey_number": null,
+      "player_name": null,
+      "team": "blue",
+      "start_time": 4008.0,
+      "end_time": 4009.5,
+      "bounding_box": [
+        0.46,
+        0.61,
+        0.02,
+        0.04
+      ],
+      "confidence": 0.9,
+      "notes": "Freekick awarded to the blue team after a foul.",
+      "_source_file": "uploaded_video_stream_chunk_006.json",
+      "_applied_offset_seconds": 3600
+    },
+    {
+      "event_id": "8",
+      "event_type": "miss shot",
+      "player_jersey_number": "8",
+      "player_name": null,
+      "team": "maroon",
+      "start_time": 4108.0,
+      "end_time": 4109.5,
+      "bounding_box": [
+        0.45,
+        0.28,
+        0.06,
+        0.14
+      ],
+      "confidence": 0.85,
+      "notes": "Shot from outside the penalty area goes wide of the right post.",
+      "_source_file": "uploaded_video_stream_chunk_006.json",
+      "_applied_offset_seconds": 3600
+    },
+    {
+      "event_id": "015",
+      "event_type": "goal",
+      "player_jersey_number": "11",
+      "player_name": null,
+      "team": "maroon",
+      "start_time": 4185.0,
+      "end_time": 4187.0,
+      "bounding_box": [
+        0.77,
+        0.52,
+        0.05,
+        0.14
+      ],
+      "confidence": 0.98,
+      "notes": "",
+      "_source_file": "uploaded_video_stream_chunk_003.json",
+      "_applied_offset_seconds": 1800
+    },
+    {
+      "event_id": "64955e15-b4a5-475e-8660-525656e0e5b1",
+      "event_type": "goal",
+      "player_jersey_number": null,
+      "player_name": null,
+      "team": "maroon",
+      "start_time": 4233.06,
+      "end_time": 4236.56,
+      "bounding_box": [
+        0.41,
+        0.24,
+        0.19,
+        0.43
+      ],
+      "confidence": 0.9,
+      "notes": "pixel_box",
+      "_source_file": "uploaded_video_stream_chunk_007.json",
+      "_applied_offset_seconds": 4200
+    },
+    {
+      "event_id": "04d1304a-b30c-4a95-a00f-0d747845444f",
+      "event_type": "freekick",
+      "player_jersey_number": null,
+      "player_name": null,
+      "team": "blue",
+      "start_time": 4352.21,
+      "end_time": 4353.27,
+      "bounding_box": [
+        0.54,
+        0.3,
+        0.05,
+        0.1
+      ],
+      "confidence": 0.8,
+      "notes": "pixel_box",
+      "_source_file": "uploaded_video_stream_chunk_007.json",
+      "_applied_offset_seconds": 4200
+    },
+    {
+      "event_id": "746d12b3-97e2-499c-898a-26f73286162b",
+      "event_type": "goal",
+      "player_jersey_number": "8",
+      "player_name": null,
+      "team": "blue",
+      "start_time": 4620.5,
+      "end_time": 4623.0,
+      "bounding_box": [
+        0.55,
+        0.23,
+        0.11,
+        0.23
+      ],
+      "confidence": 0.95,
+      "notes": "pixel_box: Goal scored by player number 8.",
+      "_source_file": "uploaded_video_stream_chunk_007.json",
+      "_applied_offset_seconds": 4200
+    },
+    {
+      "event_id": "9",
+      "event_type": "goal",
+      "player_jersey_number": "10",
+      "player_name": null,
+      "team": "maroon",
+      "start_time": 4717.8,
+      "end_time": 4719.1,
+      "bounding_box": [
+        0.78,
+        0.55,
+        0.04,
+        0.13
+      ],
+      "confidence": 0.98,
+      "notes": "Goal scored by the maroon team.",
+      "_source_file": "uploaded_video_stream_chunk_005.json",
+      "_applied_offset_seconds": 3000
+    },
+    {
+      "event_id": "1",
+      "event_type": "freekick",
+      "player_jersey_number": "7",
+      "player_name": null,
+      "team": "blue",
+      "start_time": 4849.5,
+      "end_time": 4853.0,
+      "bounding_box": [
+        0.46,
+        0.49,
+        0.05,
+        0.13
+      ],
+      "confidence": 0.9,
+      "notes": "",
+      "_source_file": "uploaded_video_stream_chunk_008.json",
+      "_applied_offset_seconds": 4800
+    },
+    {
+      "event_id": "2",
+      "event_type": "miss shot",
+      "player_jersey_number": "7",
+      "player_name": null,
+      "team": "blue",
+      "start_time": 4852.5,
+      "end_time": 4854.0,
+      "bounding_box": [
+        0.46,
+        0.49,
+        0.05,
+        0.13
+      ],
+      "confidence": 0.85,
+      "notes": "Shot from free kick goes over the goal.",
+      "_source_file": "uploaded_video_stream_chunk_008.json",
+      "_applied_offset_seconds": 4800
     },
     {
       "event_id": "3",
       "event_type": "tackle",
-      "player_jersey_number": "21",
-      "player_name": "Lungu Andrei",
-      "team": "blue",
-      "start_time": 291.0,
-      "end_time": 292.0,
-      "bounding_box": [
-        0.42,
-        0.56,
-        0.06,
-        0.2
-      ],
-      "confidence": 0.8,
-      "notes": ""
-    },
-    {
-      "event_id": "4b5d4b8e-1a2c-4e89-a2e1-4c1c9c7f6b0a",
-      "event_type": "miss shot",
-      "player_jersey_number": "10",
-      "player_name": "Muresan Alexandru Ovidiu",
-      "team": "blue",
-      "start_time": 300.5,
-      "end_time": 302.1,
-      "bounding_box": [
-        0.701,
-        0.503,
-        0.052,
-        0.12
-      ],
-      "confidence": 0.8,
-      "notes": "Shot from outside the box goes wide."
-    },
-    {
-      "event_id": "b5c6d7e8-f9a0-41b2-c3d4-5e6f7a8b9c0d",
-      "event_type": "tackle",
-      "player_jersey_number": "17",
-      "player_name": "Ciciovan Raul Gabriel",
-      "team": "blue",
-      "start_time": 304.04,
-      "end_time": 305.54,
-      "bounding_box": [
-        0.716,
-        0.356,
-        0.074,
-        0.103
-      ],
-      "confidence": 0.9,
-      "notes": "Player makes a sliding tackle on the sideline, resulting in a foul."
-    },
-    {
-      "event_id": "4",
-      "event_type": "save",
-      "player_jersey_number": "1",
+      "player_jersey_number": "14",
       "player_name": null,
       "team": "maroon",
-      "start_time": 314.0,
-      "end_time": 315.5,
+      "start_time": 4911.0,
+      "end_time": 4912.5,
       "bounding_box": [
-        0.1,
-        0.44,
-        0.06,
-        0.17
-      ],
-      "confidence": 0.9,
-      "notes": "Goalkeeper dives to his left to save a shot from inside the box."
-    },
-    {
-      "event_id": "1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bed",
-      "event_type": "tackle",
-      "player_jersey_number": "17",
-      "player_name": "Ciciovan Raul Gabriel",
-      "team": "blue",
-      "start_time": 317.0,
-      "end_time": 318.5,
-      "bounding_box": [
-        0.401,
-        0.555,
-        0.062,
-        0.1
-      ],
-      "confidence": 0.85,
-      "notes": ""
-    },
-    {
-      "event_id": "4",
-      "event_type": "tackle",
-      "player_jersey_number": null,
-      "player_name": null,
-      "team": "blue",
-      "start_time": 349.5,
-      "end_time": 351.0,
-      "bounding_box": [
-        0.49,
-        0.57,
-        0.07,
-        0.16
-      ],
-      "confidence": 0.8,
-      "notes": "Blue player makes a slide tackle resulting in a foul."
-    },
-    {
-      "event_id": "4",
-      "event_type": "save",
-      "player_jersey_number": null,
-      "player_name": null,
-      "team": "maroon",
-      "start_time": 354.0,
-      "end_time": 355.0,
-      "bounding_box": [
-        0.13,
-        0.51,
+        0.67,
+        0.61,
         0.08,
-        0.23
+        0.15
+      ],
+      "confidence": 0.8,
+      "notes": "",
+      "_source_file": "uploaded_video_stream_chunk_008.json",
+      "_applied_offset_seconds": 4800
+    },
+    {
+      "event_id": "4",
+      "event_type": "save",
+      "player_jersey_number": null,
+      "player_name": null,
+      "team": "maroon",
+      "start_time": 4919.5,
+      "end_time": 5001.0,
+      "bounding_box": [
+        0.69,
+        0.54,
+        0.06,
+        0.18
       ],
       "confidence": 0.95,
-      "notes": "Point-blank save."
+      "notes": "Goalkeeper saves a shot from a blue player.",
+      "_source_file": "uploaded_video_stream_chunk_008.json",
+      "_applied_offset_seconds": 4800
     },
     {
-      "event_id": "12f7a6b8-3a4b-4f9c-8a1d-2b3c4d5e6f7a",
-      "event_type": "save",
-      "player_jersey_number": "1",
-      "player_name": null,
-      "team": "blue",
-      "start_time": 354.0,
-      "end_time": 355.6,
-      "bounding_box": [
-        0.875,
-        0.45,
-        0.062,
-        0.157
-      ],
-      "confidence": 0.92,
-      "notes": "Goalkeeper catches a shot."
-    },
-    {
-      "event_id": "5",
-      "event_type": "pass",
-      "player_jersey_number": "4",
-      "player_name": null,
-      "team": "maroon",
-      "start_time": 392.0,
-      "end_time": 393.0,
-      "bounding_box": [
-        0.25,
-        0.55,
-        0.06,
-        0.16
-      ],
-      "confidence": 0.75,
-      "notes": "A long forward pass from the defender."
-    },
-    {
-      "event_id": "5",
-      "event_type": "goal",
-      "player_jersey_number": null,
-      "player_name": null,
-      "team": "maroon",
-      "start_time": 393.5,
-      "end_time": 395.5,
-      "bounding_box": [
-        0.75,
-        0.55,
-        0.04,
-        0.12
-      ],
-      "confidence": 0.98,
-      "notes": "Maroon player scores a goal with a header from a cross."
-    },
-    {
-      "event_id": "893c099a-a8b4-4e2a-b10b-87358d7c43c1",
-      "event_type": "pass",
+      "event_id": "6",
+      "event_type": "freekick",
       "player_jersey_number": "20",
       "player_name": null,
       "team": "maroon",
-      "start_time": 420.81,
-      "end_time": 421.51,
-      "bounding_box": [
-        0.49,
-        0.53,
-        0.04,
-        0.1
-      ],
-      "confidence": 0.95,
-      "notes": "Kick-off."
-    },
-    {
-      "event_id": "1e7a5c6b-2d7c-4a3d-9d1d-0f9c2e1b9b0a",
-      "event_type": "tackle",
-      "player_jersey_number": "10",
-      "player_name": "Muresan Alexandru Ovidiu",
-      "team": "blue",
-      "start_time": 427.1,
-      "end_time": 427.8,
-      "bounding_box": [
-        0.4,
-        0.58,
-        0.05,
-        0.12
-      ],
-      "confidence": 0.88,
-      "notes": "Tackle in the center of the pitch."
-    },
-    {
-      "event_id": "8",
-      "event_type": "goal",
-      "player_jersey_number": "9",
-      "player_name": "Butcure Darius Antonio",
-      "team": "blue",
-      "start_time": 427.5,
-      "end_time": 429.0,
-      "bounding_box": [
-        0.18,
-        0.47,
-        0.05,
-        0.13
-      ],
-      "confidence": 0.99,
-      "notes": "The blue team scores a goal after a scramble in the penalty box."
-    },
-    {
-      "event_id": "5",
-      "event_type": "goal",
-      "player_jersey_number": "10",
-      "player_name": null,
-      "team": "maroon",
-      "start_time": 435.5,
-      "end_time": 436.8,
-      "bounding_box": [
-        0.422,
-        0.648,
-        0.031,
-        0.139
-      ],
-      "confidence": 0.98,
-      "notes": "Player #10 scores a goal from the left side of the penalty area."
-    },
-    {
-      "event_id": "4b6f8a2d-9c3e-4b7c-8a1d-9f8c7b6a5b4c",
-      "event_type": "tackle",
-      "player_jersey_number": "9",
-      "player_name": null,
-      "team": "maroon",
-      "start_time": 440.5,
-      "end_time": 441.2,
-      "bounding_box": [
-        0.45,
-        0.35,
-        0.06,
-        0.13
-      ],
-      "confidence": 0.85,
-      "notes": "Sliding tackle near the center circle."
-    },
-    {
-      "event_id": "d7e8f9a0-b1c2-43d4-e5f6-7a8b9c0d1e2f",
-      "event_type": "save",
-      "player_jersey_number": null,
-      "player_name": null,
-      "team": "blue",
-      "start_time": 444.61,
-      "end_time": 445.61,
-      "bounding_box": [
-        0.297,
-        0.536,
-        0.057,
-        0.15
-      ],
-      "confidence": 0.95,
-      "notes": "Goalkeeper dives to save a shot."
-    },
-    {
-      "event_id": "d9e8f7c6-5b4a-3d2e-1c0b-9a8f7e6d5c4b",
-      "event_type": "miss shot",
-      "player_jersey_number": null,
-      "player_name": null,
-      "team": "blue",
-      "start_time": 461.5,
-      "end_time": 462.5,
-      "bounding_box": [
-        0.34,
-        0.28,
-        0.06,
-        0.15
-      ],
-      "confidence": 0.85,
-      "notes": "Shot from outside the box goes wide."
-    },
-    {
-      "event_id": "3a2b1c0d-9e8f-7d6c-5b4a-3d2e1c0b9a8f",
-      "event_type": "pass",
-      "player_jersey_number": "11",
-      "player_name": "Iuhos Matei Nicholas",
-      "team": "blue",
-      "start_time": 467.3,
-      "end_time": 468.0,
+      "start_time": 4985.5,
+      "end_time": 4988.0,
       "bounding_box": [
         0.28,
-        0.5,
-        0.06,
-        0.13
-      ],
-      "confidence": 0.92,
-      "notes": "Assist pass leading to the goal."
-    },
-    {
-      "event_id": "f7e6d5c4-b3a2-1c0d-9e8f-7d6c5b4a3d2e",
-      "event_type": "goal",
-      "player_jersey_number": "10",
-      "player_name": "Muresan Alexandru Ovidiu",
-      "team": "blue",
-      "start_time": 468.0,
-      "end_time": 469.0,
-      "bounding_box": [
-        0.17,
-        0.4,
-        0.07,
-        0.16
-      ],
-      "confidence": 0.98,
-      "notes": "Player scores with a low shot past the keeper."
-    },
-    {
-      "event_id": "9a8f7e6d-5c4b-3a2b-1c0d-9e8f7d6c5b4a",
-      "event_type": "miss shot",
-      "player_jersey_number": null,
-      "player_name": null,
-      "team": "blue",
-      "start_time": 499.5,
-      "end_time": 500.5,
-      "bounding_box": [
-        0.82,
-        0.42,
-        0.06,
+        0.61,
+        0.05,
         0.14
       ],
-      "confidence": 0.8,
-      "notes": "Header from a corner kick goes over the bar."
-    },
-    {
-      "event_id": "f9a0b1c2-d3e4-45f6-a7b8-c9d0e1f2a3b4",
-      "event_type": "miss shot",
-      "player_jersey_number": null,
-      "player_name": null,
-      "team": "maroon",
-      "start_time": 507.97,
-      "end_time": 509.47,
-      "bounding_box": [
-        0.252,
-        0.443,
-        0.047,
-        0.144
-      ],
       "confidence": 0.9,
-      "notes": "Shot from close range goes over the bar."
-    },
-    {
-      "event_id": "6",
-      "event_type": "save",
-      "player_jersey_number": null,
-      "player_name": null,
-      "team": "maroon",
-      "start_time": 512.7,
-      "end_time": 514.1,
-      "bounding_box": [
-        0.782,
-        0.48,
-        0.05,
-        0.15
-      ],
-      "confidence": 0.9,
-      "notes": "Maroon goalkeeper saves a shot from a blue player."
-    },
-    {
-      "event_id": "5",
-      "event_type": "pass",
-      "player_jersey_number": "8",
-      "player_name": null,
-      "team": "maroon",
-      "start_time": 513.0,
-      "end_time": 513.8,
-      "bounding_box": [
-        0.57,
-        0.48,
-        0.05,
-        0.19
-      ],
-      "confidence": 0.85,
-      "notes": ""
-    },
-    {
-      "event_id": "6",
-      "event_type": "save",
-      "player_jersey_number": null,
-      "player_name": null,
-      "team": "blue",
-      "start_time": 515.0,
-      "end_time": 516.0,
-      "bounding_box": [
-        0.83,
-        0.46,
-        0.08,
-        0.23
-      ],
-      "confidence": 0.9,
-      "notes": ""
-    },
-    {
-      "event_id": "c2d3e4f5-a6b7-48c9-d0e1-f2a3b4c5d6e7",
-      "event_type": "tackle",
-      "player_jersey_number": null,
-      "player_name": null,
-      "team": "maroon",
-      "start_time": 545.91,
-      "end_time": 547.41,
-      "bounding_box": [
-        0.467,
-        0.43,
-        0.063,
-        0.151
-      ],
-      "confidence": 0.85,
-      "notes": "Maroon player dispossesses the blue player. A foul is called against the maroon player."
-    },
-    {
-      "event_id": "1c0b9a8f-7e6d-5c4b-3a2b-1c0d9e8f7d6c",
-      "event_type": "save",
-      "player_jersey_number": null,
-      "player_name": null,
-      "team": "blue",
-      "start_time": 548.0,
-      "end_time": 549.0,
-      "bounding_box": [
-        0.84,
-        0.44,
-        0.09,
-        0.19
-      ],
-      "confidence": 0.95,
-      "notes": "Diving save from a shot by maroon player #11."
+      "notes": "",
+      "_source_file": "uploaded_video_stream_chunk_008.json",
+      "_applied_offset_seconds": 4800
     },
     {
       "event_id": "7",
-      "event_type": "pass",
-      "player_jersey_number": "9",
+      "event_type": "goal",
+      "player_jersey_number": "4",
       "player_name": null,
       "team": "maroon",
-      "start_time": 633.0,
-      "end_time": 633.8,
+      "start_time": 4997.5,
+      "end_time": 4999.5,
       "bounding_box": [
-        0.68,
-        0.46,
-        0.06,
-        0.2
+        0.21,
+        0.55,
+        0.05,
+        0.14
       ],
-      "confidence": 0.95,
-      "notes": "Assist for the goal."
+      "confidence": 0.98,
+      "notes": "Header goal from a free kick cross.",
+      "_source_file": "uploaded_video_stream_chunk_008.json",
+      "_applied_offset_seconds": 4800
+    },
+    {
+      "event_id": "5",
+      "event_type": "tackle",
+      "player_jersey_number": "8",
+      "player_name": null,
+      "team": "blue",
+      "start_time": 5019.0,
+      "end_time": 5021.0,
+      "bounding_box": [
+        0.26,
+        0.35,
+        0.09,
+        0.16
+      ],
+      "confidence": 0.75,
+      "notes": "Foul called on the tackle.",
+      "_source_file": "uploaded_video_stream_chunk_008.json",
+      "_applied_offset_seconds": 4800
+    },
+    {
+      "event_id": "10",
+      "event_type": "corner",
+      "player_jersey_number": null,
+      "player_name": null,
+      "team": "maroon",
+      "start_time": 5104.8,
+      "end_time": 5106.0,
+      "bounding_box": [
+        0.02,
+        0.9,
+        0.05,
+        0.14
+      ],
+      "confidence": 0.9,
+      "notes": "",
+      "_source_file": "uploaded_video_stream_chunk_005.json",
+      "_applied_offset_seconds": 3000
     },
     {
       "event_id": "8",
-      "event_type": "goal",
+      "event_type": "tackle",
       "player_jersey_number": "10",
       "player_name": null,
       "team": "maroon",
-      "start_time": 634.5,
-      "end_time": 635.5,
+      "start_time": 5150.0,
+      "end_time": 5151.5,
       "bounding_box": [
-        0.75,
-        0.5,
-        0.05,
-        0.19
+        0.47,
+        0.46,
+        0.09,
+        0.12
       ],
-      "confidence": 0.98,
-      "notes": ""
+      "confidence": 0.8,
+      "notes": "Sliding tackle resulting in a foul.",
+      "_source_file": "uploaded_video_stream_chunk_008.json",
+      "_applied_offset_seconds": 4800
     },
     {
-      "event_id": "c7d8a2b3-4f5e-4a9b-8c1d-2e3f4a5b6c7d",
-      "event_type": "goal",
-      "player_jersey_number": "10",
-      "player_name": "Muresan Alexandru Ovidiu",
+      "event_id": "9",
+      "event_type": "freekick",
+      "player_jersey_number": "6",
+      "player_name": null,
       "team": "blue",
-      "start_time": 648.0,
-      "end_time": 649.1,
+      "start_time": 5178.5,
+      "end_time": 5180.0,
       "bounding_box": [
-        0.75,
-        0.65,
-        0.05,
-        0.13
+        0.43,
+        0.74,
+        0.04,
+        0.14
       ],
       "confidence": 0.9,
-      "notes": "Goal scored from inside the penalty area."
+      "notes": "",
+      "_source_file": "uploaded_video_stream_chunk_008.json",
+      "_applied_offset_seconds": 4800
     },
     {
-      "event_id": "f5a6b7c8-9d0e-4f1a-2b3c-4d5e6f7a8b9c",
+      "event_id": "10",
+      "event_type": "goal",
+      "player_jersey_number": "10",
+      "player_name": null,
+      "team": "blue",
+      "start_time": 5194.0,
+      "end_time": 5196.0,
+      "bounding_box": [
+        0.72,
+        0.54,
+        0.05,
+        0.15
+      ],
+      "confidence": 0.97,
+      "notes": "Goal scored after a cross from a free kick.",
+      "_source_file": "uploaded_video_stream_chunk_008.json",
+      "_applied_offset_seconds": 4800
+    },
+    {
+      "event_id": "11",
       "event_type": "save",
       "player_jersey_number": null,
       "player_name": null,
       "team": "maroon",
-      "start_time": 854.0,
-      "end_time": 855.5,
+      "start_time": 5611.0,
+      "end_time": 5612.0,
       "bounding_box": [
-        0.1,
-        0.5,
-        0.062,
-        0.157
+        0.15,
+        0.45,
+        0.07,
+        0.15
       ],
-      "confidence": 0.91,
-      "notes": "Goalkeeper makes a save on a shot from the blue team."
+      "confidence": 0.9,
+      "notes": "Goalkeeper makes a diving save to his right.",
+      "_source_file": "uploaded_video_stream_chunk_005.json",
+      "_applied_offset_seconds": 3000
     },
     {
       "event_id": "9",
-      "event_type": "tackle",
-      "player_jersey_number": "21",
-      "player_name": "Lungu Andrei",
+      "event_type": "save",
+      "player_jersey_number": "1",
+      "player_name": null,
       "team": "blue",
-      "start_time": 1330.0,
-      "end_time": 1331.0,
+      "start_time": 5904.5,
+      "end_time": 5906.0,
       "bounding_box": [
-        0.47,
-        0.46,
-        0.06,
-        0.21
+        0.18,
+        0.4,
+        0.1,
+        0.2
       ],
-      "confidence": 0.85,
-      "notes": ""
+      "confidence": 0.9,
+      "notes": "Goalkeeper makes a diving save to his right.",
+      "_source_file": "uploaded_video_stream_chunk_006.json",
+      "_applied_offset_seconds": 3600
     },
     {
       "event_id": "10",
-      "event_type": "miss shot",
-      "player_jersey_number": "7",
-      "player_name": null,
-      "team": "maroon",
-      "start_time": 2028.5,
-      "end_time": 2029.5,
-      "bounding_box": [
-        0.36,
-        0.37,
-        0.05,
-        0.19
-      ],
-      "confidence": 0.9,
-      "notes": "Shot hit the crossbar."
-    },
-    {
-      "event_id": "11",
       "event_type": "pass",
       "player_jersey_number": "11",
       "player_name": null,
-      "team": "maroon",
-      "start_time": 3500.0,
-      "end_time": 3501.0,
+      "team": "blue",
+      "start_time": 6239.5,
+      "end_time": 6240.5,
       "bounding_box": [
-        0.81,
-        0.6,
-        0.05,
-        0.19
+        0.3,
+        0.45,
+        0.06,
+        0.13
       ],
-      "confidence": 0.8,
-      "notes": "Cross from the right wing."
+      "confidence": 0.9,
+      "notes": "Assist for the goal scored by player #10.",
+      "_source_file": "uploaded_video_stream_chunk_006.json",
+      "_applied_offset_seconds": 3600
+    },
+    {
+      "event_id": "11",
+      "event_type": "goal",
+      "player_jersey_number": "10",
+      "player_name": null,
+      "team": "blue",
+      "start_time": 6240.5,
+      "end_time": 6242.0,
+      "bounding_box": [
+        0.22,
+        0.5,
+        0.05,
+        0.12
+      ],
+      "confidence": 0.95,
+      "notes": "Goal scored with a low shot into the bottom right corner.",
+      "_source_file": "uploaded_video_stream_chunk_006.json",
+      "_applied_offset_seconds": 3600
+    },
+    {
+      "event_id": "12",
+      "event_type": "foul",
+      "player_jersey_number": "8",
+      "player_name": null,
+      "team": "blue",
+      "start_time": 6426.5,
+      "end_time": 6428.0,
+      "bounding_box": [
+        0.24,
+        0.5,
+        0.04,
+        0.13
+      ],
+      "confidence": 1.0,
+      "notes": "Player #8 taking the penalty shot.",
+      "_source_file": "uploaded_video_stream_chunk_005.json",
+      "_applied_offset_seconds": 3000
+    },
+    {
+      "event_id": "13",
+      "event_type": "penalty",
+      "player_jersey_number": "8",
+      "player_name": null,
+      "team": "blue",
+      "start_time": 6428.0,
+      "end_time": 6429.0,
+      "bounding_box": [
+        0.24,
+        0.5,
+        0.04,
+        0.13
+      ],
+      "confidence": 1.0,
+      "notes": "Goal scored from the penalty kick.",
+      "_source_file": "uploaded_video_stream_chunk_005.json",
+      "_applied_offset_seconds": 3000
+    },
+    {
+      "event_id": "12",
+      "event_type": "foul",
+      "player_jersey_number": null,
+      "player_name": null,
+      "team": "maroon",
+      "start_time": 7465.0,
+      "end_time": 7467.0,
+      "bounding_box": [
+        0.18,
+        0.35,
+        0.15,
+        0.2
+      ],
+      "confidence": 0.9,
+      "notes": "Penalty awarded to maroon team for a foul in the box on player #11.",
+      "_source_file": "uploaded_video_stream_chunk_006.json",
+      "_applied_offset_seconds": 3600
+    },
+    {
+      "event_id": "13",
+      "event_type": "penalty",
+      "player_jersey_number": "11",
+      "player_name": null,
+      "team": "maroon",
+      "start_time": 7495.0,
+      "end_time": 7496.5,
+      "bounding_box": [
+        0.26,
+        0.48,
+        0.05,
+        0.13
+      ],
+      "confidence": 0.98,
+      "notes": "Goal scored from a penalty kick.",
+      "_source_file": "uploaded_video_stream_chunk_006.json",
+      "_applied_offset_seconds": 3600
     }
   ],
-  "notes": "Merged from Gemini chunk outputs"
+  "notes": "Times adjusted by Rule B offsets; penalty goals normalized to 'penalty'; 'penalty' events normalized to 'foul'."
 }
