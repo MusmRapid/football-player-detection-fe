@@ -426,14 +426,14 @@ const App: React.FC = () => {
             <div className="grid grid-cols-1 gap-10 md:grid-cols-2">
               <section>
                 <h2 className="mb-4 text-2xl font-semibold text-red-400">
-                  Red Team
+                  CFR Cluj
                 </h2>
                 <EventsTable events={filterEvents(redTeam)} />
               </section>
 
               <section>
                 <h2 className="mb-4 text-2xl font-semibold text-blue-400">
-                  Blue Team
+                  Academia de Fotbal Viitorul Cluj
                 </h2>
                 <EventsTable events={filterEvents(blueTeam)} />
               </section>
